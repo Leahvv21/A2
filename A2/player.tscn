@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo2fniho637jo"]
+[gd_scene load_steps=4 format=3 uid="uid://ddq61afo2g0mi"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ucxf"]
-[ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_jctnk"]
-[ext_resource type="PackedScene" uid="uid://do8y46fwdcbce" path="res://grid_movement.tscn" id="3_xba6d"]
+[ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_nysqu"]
+[ext_resource type="PackedScene" uid="uid://cafke7qkrgpon" path="res://grid_movement.tscn" id="3_xba6d"]
 
 [node name="Player" type="Sprite2D"]
-texture = ExtResource("1_jctnk")
+texture = ExtResource("1_nysqu")
 region_enabled = true
 region_rect = Rect2(480, 16, 16, 16)
 script = ExtResource("1_0ucxf")
