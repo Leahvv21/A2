@@ -1,0 +1,23 @@
+Turn based strategy game:
+	Victor’s idee.
+
+Exploration and Puzzle:
+	Zelda like game, top down adventure. 
+
+Victor: Level design
+Jesse: Mechanics (Tech)
+Ferid: Mechanics (UI)
+Leah: Mechanics (object interactie), Graphics&Animation
+Dominic: Level Design, Audio
+
+      0.   Project set-up (git) 
+      1. Werkend test-level en playable character
+      2. Lichtstraal met collision (stopt bij eerstvolgende muur)
+      3. Speler loopt niet verder dan lichtstraal (licht gebonden)
+      4. Spiegel toevoegen (lichtreflectie)
+      5. Speler interacteert met spiegel (oprapen,  plaatsen, draaien)
+      6.  ….
+      7. Levels maken 
+      8. Art implementeren
+      9. Audio implementeren
+      10. Gebruiksvriendelijk maken (interface tekst)
