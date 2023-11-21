@@ -1,9 +1,26 @@
 extends Node2D
 
-@export var length: int
+@export var Length: int
 
-func _process(delta):
-	light_beam()
+func _ready():
+	Length = Constants.TILE_SIZE * 2
+	$RayCast2D.target_position = Vector2.ZERO
+	$RayCast2D.force_raycast_update() # Update the `target_position` immediately
+
+func _process(_delta):
+	if Input.is_action_just_released("interact"):
+		if $RayCast2D.target_position == Vector2.ZERO: 
+			$RayCast2D.target_position = Vector2.DOWN * Length
+		elif $RayCast2D.target_position == Vector2.DOWN * Length: 
+			$RayCast2D.target_position = Vector2.LEFT * Length
+		elif $RayCast2D.target_position == Vector2.LEFT * Length: 
+			$RayCast2D.target_position = Vector2.UP * Length
+		elif $RayCast2D.target_position == Vector2.UP * Length: 
+			$RayCast2D.target_position = Vector2.RIGHT * Length
+		elif $RayCast2D.target_position == Vector2.RIGHT * Length: 
+			$RayCast2D.target_position = Vector2.DOWN * Length
+		$RayCast2D.force_raycast_update() # Update the `target_position` immediately
+		light_beam()
 
 func light_beam():
 	var tile = $RayCast2D.get_collider()

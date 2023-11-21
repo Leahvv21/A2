@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1700576811
+colored_packed.png::CompressedTexture2D::1410787926137834399::1636499092::1699985464::1::::<><>::
+constants.gd::GDScript::-1::1699984669::0::1::::<>Node<>::
+game.tscn::PackedScene::9020676686552151160::1700002414::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://bo2fniho637jo::::res://player.tscn
+gridMovement.gd::GDScript::-1::1700002441::0::1::::<>Node2D<>::
+grid_movement.tscn::PackedScene::8211540960696910988::1700002414::0::1::::<><>::res://gridMovement.gd
+icon.svg::CompressedTexture2D::7619101279106782816::1699978076::1699978082::1::::<><>::
+player.gd::GDScript::-1::1700001494::0::1::::<>Sprite2D<>::
+player.tscn::PackedScene::3425129925948856592::1700002441::0::1::::<><>::res://player.gd<>uid://udnqarfniwrv::::res://colored_packed.png<>uid://do8y46fwdcbce::::res://grid_movement.tscn
+README.md::TextFile::-1::1699978996::0::1::::<><>::
