@@ -26,7 +26,7 @@ func move(direction: Vector2) -> void:
 			
 			var new_position = self_node.global_position + (moving_direction * Constants.TILE_SIZE)
 			
-			print(new_position)
+			#print(new_position)
 			
 			var tween = create_tween()
 			tween.tween_property(self_node, "position", new_position, speed).set_trans(Tween.TRANS_LINEAR)

@@ -3252,7 +3252,7 @@ texture = ExtResource("1_kfr2f")
 48:21/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_46c7i"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 0
 sources/1 = SubResource("TileSetAtlasSource_hqca1")
 
 [node name="Game" type="Node2D"]
@@ -3268,7 +3268,8 @@ position = Vector2(-8, -8)
 [node name="Overlay" parent="." instance=ExtResource("3_q3b3u")]
 
 [node name="Light" parent="." instance=ExtResource("4_2xinh")]
-position = Vector2(-25, -25)
+position = Vector2(-1, -1)
+Length = 200
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false

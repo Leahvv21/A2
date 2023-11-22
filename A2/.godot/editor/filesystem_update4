@@ -3,7 +3,6 @@ res://grid_movement.tscn
 res://player.tscn
 res://overlay.tscn
 res://light.tscn
-res://player.gd
 res://light.gd
-res://overlay.gd
 res://gridMovement.gd
+res://overlay.gd
