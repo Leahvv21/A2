@@ -3,6 +3,7 @@ extends Node2D
 @export var Length: int
 var Negative = false 
 var light = true
+var Entered = false
 
 
 func _ready():
@@ -11,7 +12,7 @@ func _ready():
 	$RayCast2D.force_raycast_update() # Update the `target_position` immediately
 
 func _process(_delta):
-	if Input.is_action_just_released("interact"):
+	if Input.is_action_just_released("interact") && Entered:
 		if $RayCast2D.target_position == Vector2.ZERO: 
 			$RayCast2D.target_position = Vector2.DOWN * Length
 		elif $RayCast2D.target_position == Vector2.DOWN * Length: 
@@ -44,3 +45,12 @@ func light_beam(light_bool):
 			tile.change_back()
 		if !tile.has_method("change"):
 			return
+
+
+func _on_area_2d_area_entered(area):
+	print("Press E to turn the Lights")
+	Entered = true
+
+func _on_area_2d_area_exited(area):
+	print("Back to the Darkness...")
+	Entered = false
