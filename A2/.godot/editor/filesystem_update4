@@ -1,6 +1,9 @@
-res://light.tscn
-res://player.tscn
-res://light.gd
 res://game.tscn
+res://mirror.tscn
+res://light.tscn
+res://light.gd
+res://mirror.gd
 res://grid_movement.tscn
+res://player.tscn
 res://overlay.tscn
+res://Area2D.gd
