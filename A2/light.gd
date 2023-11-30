@@ -1,9 +1,9 @@
 extends Node2D
 
 @export var Length: int
-var Negative = false 
-@export var light = true
-@export var Activate = false
+var Negative = false #Nu niet meer nodig 
+@export var light = true #Voor als het licht verandert dat dan alles anders donker wordt
+@export var Activate = false #of het licht geactiveerd is of niet
 
 
 func _ready():
@@ -46,7 +46,7 @@ func light_beam(light_bool):
 		if tile.is_class("Area2D") && tile.has_method("activate"):
 			tile.activate()
 		if tile.has_method("change") && light_bool:
-			if $RayCast2D.global_rotation_degrees>0:
+			if $RayCast2D.global_rotation_degrees>0: #Nu zo gedaan dat het niet uitmaakt hoe je het licht neerzet het doet het altijd
 				pos = pos + Vector2(-1,-1)
 			tile.change(pos)
 		if tile.has_method("change_back") && !light_bool:
