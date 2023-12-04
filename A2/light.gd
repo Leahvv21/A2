@@ -2,7 +2,7 @@ extends Node2D
 
 @export var Length: int
 var Negative = false #Nu niet meer nodig 
-@export var light = true #Voor als het licht verandert dat dan alles anders donker wordt
+var light = true #Voor als het licht verandert dat dan alles anders donker wordt
 @export var Activate = false #of het licht geactiveerd is of niet
 
 
@@ -22,17 +22,17 @@ func _process(_delta):
 			Negative = false
 			#light = false
 		if $RayCast2D.target_position == Vector2.LEFT * Length: 
-			print("Left")
+			#print("Left")
 			Negative = false
 			#$RayCast2D.target_position = Vector2.UP * Length
 			#light = false
 		if $RayCast2D.target_position == Vector2.UP * Length: 
-			print("Up")
+			#print("Up")
 			#$RayCast2D.target_position = Vector2.RIGHT * Length
 			Negative = false
 			#light = false
 		if $RayCast2D.target_position == Vector2.RIGHT * Length: 
-			print("Right")
+			#print("Right")
 			#$RayCast2D.target_position = Vector2.DOWN * Length
 			#light = false
 			Negative = false
@@ -42,6 +42,7 @@ func _process(_delta):
 func light_beam(light_bool):
 	var tile = $RayCast2D.get_collider()
 	if tile:
+		print(tile)
 		var pos = $RayCast2D.get_collision_point()
 		if tile.is_class("Area2D") && tile.has_method("activate"):
 			tile.activate()

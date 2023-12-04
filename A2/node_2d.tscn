@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2pgtxt34xbty"]
+
+[ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="1_qnl1s"]
+[ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="2_8capg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Overlay" parent="." instance=ExtResource("1_qnl1s")]
+
+[node name="Light" parent="." instance=ExtResource("2_8capg")]
+position = Vector2(447, 68)
