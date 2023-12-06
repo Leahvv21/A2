@@ -16,7 +16,6 @@ func _process(_delta):
 
 func add_mirror(mirror_amount):
 	mirror_count += mirror_amount 
-	print(mirror_count)
 
 func check_mirror():
 	if mirror_count>0:

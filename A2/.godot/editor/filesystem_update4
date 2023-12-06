@@ -1,13 +1,14 @@
-res://room_1.tscn
 res://game.tscn
 res://grid_movement.tscn
 res://player.tscn
 res://overlay.tscn
 res://light.tscn
 res://mirror.tscn
+res://room_1.tscn
+res://MirrorPlacements.gd
+res://mirror.gd
+res://Area2D.gd
 res://Chests.gd
 res://player.gd
 res://light.gd
-res://MirrorPlacements.gd
 res://overlay.gd
-res://mirror.gd

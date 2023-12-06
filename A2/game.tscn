@@ -3267,15 +3267,15 @@ layer_0/tile_data = PackedInt32Array(-1245220, 1179649, 0, -1310685, 1310721, 0,
 position = Vector2(-8, -8)
 
 [node name="Overlay" parent="." instance=ExtResource("3_q3b3u")]
-visible = false
 
 [node name="mirror" parent="Overlay" instance=ExtResource("5_qo3i7")]
 show_behind_parent = true
-position = Vector2(-8, 55)
-rotation = -3.14159
+position = Vector2(37, -7)
+rotation = 1.5708
 
 [node name="Light" parent="." instance=ExtResource("4_2xinh")]
 position = Vector2(-8, -7)
+rotation = -1.5708
 Length = 200
 Activate = true
 

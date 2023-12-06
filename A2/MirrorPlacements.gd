@@ -7,8 +7,8 @@ func _process(delta):
 		if $"../Player".check_mirror():
 			$"../Player".add_mirror(-1)
 			var mirror_instance = mirror.instantiate()
-			add_child(mirror_instance)
 			mirror_instance.global_position = $"../Player".global_position
+			$"../Overlay".add_child(mirror_instance)
 			if $Area2D/CollisionShape2D: 
 				$Area2D/CollisionShape2D.queue_free()
 
