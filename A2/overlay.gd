@@ -1,6 +1,9 @@
 extends TileMap
 var array = []
 
+func _ready():
+	visible = true
+
 func change(pos):
 	pos = to_local(pos)
 	var cell = local_to_map(pos)

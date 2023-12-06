@@ -42,7 +42,6 @@ func _process(_delta):
 func light_beam(light_bool):
 	var tile = $RayCast2D.get_collider()
 	if tile:
-		print(tile)
 		var pos = $RayCast2D.get_collision_point()
 		if tile.is_class("Area2D") && tile.has_method("activate"):
 			tile.activate()

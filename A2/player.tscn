@@ -19,6 +19,15 @@ self_node = NodePath("..")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
+[node name="Label" type="Label" parent="Camera2D"]
+visible = false
+offset_left = -140.0
+offset_top = 63.0
+offset_right = -77.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 8
+text = "Mirror count: "
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
