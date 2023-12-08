@@ -8,9 +8,11 @@ func _process(delta):
 			$"../Player".add_mirror(-1)
 			var mirror_instance = mirror.instantiate()
 			mirror_instance.global_position = $"../Player".global_position
-			$"../Overlay".add_child(mirror_instance)
+			$"..".add_child(mirror_instance)
 			if $Area2D/CollisionShape2D: 
 				$Area2D/CollisionShape2D.queue_free()
+			else:
+				$Area2D/CollisionShape2D2.queue_free()
 
 func _on_area_2d_area_entered(area):
 	interact = true

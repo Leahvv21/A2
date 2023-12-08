@@ -1,4 +1,5 @@
 extends TileMap
+
 var array = []
 
 func _ready():

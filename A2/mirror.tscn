@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_mm7v6"]
 [ext_resource type="Script" path="res://mirror.gd" id="1_o10l1"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="2_78nfc"]
-[ext_resource type="Script" path="res://Area2D.gd" id="3_6a01q"]
+[ext_resource type="Script" path="res://StaticBody2D.gd" id="4_j33ap"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swshw"]
 atlas = ExtResource("1_mm7v6")
-region = Rect2(384, 176, 16, 16)
+region = Rect2(336, 320, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aq062"]
-size = Vector2(15, 1.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhsl4"]
+size = Vector2(1, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acw05"]
 size = Vector2(14, 12)
@@ -20,20 +20,20 @@ script = ExtResource("1_o10l1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_swshw")
+flip_h = true
 
 [node name="Light" parent="Sprite2D" instance=ExtResource("2_78nfc")]
-rotation = 1.5708
+position = Vector2(0, 5)
 Length = 200
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 collision_layer = 2
 collision_mask = 2
-monitorable = false
-script = ExtResource("3_6a01q")
+script = ExtResource("4_j33ap")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_aq062")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_dhsl4")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -41,7 +41,8 @@ collision_mask = 8
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -1)
+position = Vector2(-1, 0)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_acw05")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

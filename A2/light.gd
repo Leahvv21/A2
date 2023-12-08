@@ -24,9 +24,11 @@ func light_beam(light_bool):
 	if tile:
 		var pos = $RayCast2D.get_collision_point()
 		if tile.has_method("activate"):
+			#print( "light_beam: has_method(activate)")
 			tile.activate()
 		if tile.has_method("change") && light_bool:
-			if $RayCast2D.global_rotation_degrees>0: #Nu zo gedaan dat het niet uitmaakt hoe je het licht neerzet het doet het altijd
+			print($RayCast2D.global_rotation_degrees)
+			if fposmod($RayCast2D.global_rotation_degrees, 360) > 45 &&  fposmod($RayCast2D.global_rotation_degrees, 360) < 200: #Nu zo gedaan dat het niet uitmaakt hoe je het licht neerzet het doet het altijd
 				pos = pos + Vector2(-1,-1)
 			tile.change(pos)
 		if tile.has_method("change_back") && !light_bool:

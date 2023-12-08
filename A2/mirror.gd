@@ -3,7 +3,7 @@ var interact = false
 
 func _process(delta):
 	if interact && Input.is_action_just_pressed("flip"):
-		$Sprite2D.flip_h = !$Sprite2D.flip_h
+		$Sprite2D.flip_v = !$Sprite2D.flip_v
 		$Sprite2D/Light.rotation_degrees += 180 
 		$Sprite2D/Light.light = false
 	elif interact && Input.is_action_just_pressed("interact"):
