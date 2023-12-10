@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cacqx0ckasme3"]
+
+[ext_resource type="Shader" path="res://level change/pixellation_transition.gdshader" id="1_k4vnv"]
+[ext_resource type="Script" path="res://level change/pixellation_transition.gd" id="2_3ttxl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mc4yc"]
+shader = ExtResource("1_k4vnv")
+shader_parameter/pixelFactor = 10.0
+shader_parameter/dissolve_state = 0.0
+
+[sub_resource type="Animation" id="Animation_csfeb"]
+resource_name = "pixelate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/pixelFactor")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 0.453]
+}
+
+[sub_resource type="Animation" id="Animation_ii2me"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/pixelFactor")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83mnt"]
+_data = {
+"RESET": SubResource("Animation_ii2me"),
+"pixelate": SubResource("Animation_csfeb")
+}
+
+[node name="Pixellation" type="Sprite2D"]
+material = SubResource("ShaderMaterial_mc4yc")
+script = ExtResource("2_3ttxl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_83mnt")
+}

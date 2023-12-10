@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu58hbme46i5q"]
+
+[ext_resource type="Script" path="res://level change/level_change.gd" id="1_lshhm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hs2qw"]
+size = Vector2(16, 16)
+
+[node name="Level_change" type="Area2D"]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_lshhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hs2qw")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
