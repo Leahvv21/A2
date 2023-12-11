@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7ji0m7kmxpj0"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_0c5mx"]
+[ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_7gdgm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgys6"]
+atlas = ExtResource("1_7gdgm")
+region = Rect2(608, 32, 16, 16)
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_0c5mx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.0784314, 0.0862745, 1)
+texture = SubResource("AtlasTexture_mgys6")
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D"]
+target_position = Vector2(0, 10)

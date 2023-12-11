@@ -1,4 +1,5 @@
 extends StaticBody2D
 
 func activate():
-	$"../Light".Activate = true
+	if !$"../RayCast2D".is_colliding():
+		$"../Light".Activate = true

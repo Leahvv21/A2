@@ -17,7 +17,11 @@ func _process(_delta):
 		$RayCast2D.enabled = true
 		if $RayCast2D.target_position == Vector2.ZERO: 
 			$RayCast2D.target_position = Vector2.DOWN * Length
+	#else:
+		#$RayCast2D.target_position = Vector2.ZERO
+		#$RayCast2D.enabled = false 
 	light_beam(light)
+
 
 func light_beam(light_bool):
 	var tile = $RayCast2D.get_collider()
@@ -27,7 +31,6 @@ func light_beam(light_bool):
 			#print( "light_beam: has_method(activate)")
 			tile.activate()
 		if tile.has_method("change") && light_bool:
-			print($RayCast2D.global_rotation_degrees)
 			if fposmod($RayCast2D.global_rotation_degrees, 360) > 45 &&  fposmod($RayCast2D.global_rotation_degrees, 360) < 200: #Nu zo gedaan dat het niet uitmaakt hoe je het licht neerzet het doet het altijd
 				pos = pos + Vector2(-1,-1)
 			tile.change(pos)
