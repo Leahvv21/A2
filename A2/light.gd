@@ -17,9 +17,8 @@ func _process(_delta):
 		$RayCast2D.enabled = true
 		if $RayCast2D.target_position == Vector2.ZERO: 
 			$RayCast2D.target_position = Vector2.DOWN * Length
-	#else:
-		#$RayCast2D.target_position = Vector2.ZERO
-		#$RayCast2D.enabled = false 
+	else:
+		$RayCast2D.enabled = false 
 	light_beam(light)
 
 

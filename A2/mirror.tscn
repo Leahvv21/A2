@@ -23,7 +23,7 @@ texture = SubResource("AtlasTexture_swshw")
 flip_h = true
 
 [node name="Light" parent="Sprite2D" instance=ExtResource("2_78nfc")]
-position = Vector2(0, 5)
+position = Vector2(-1, 0)
 Length = 200
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

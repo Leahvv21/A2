@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dj1cuy0oi352a"]
+[gd_scene load_steps=18 format=3 uid="uid://dj1cuy0oi352a"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_0blxg"]
 [ext_resource type="Script" path="res://room_2.gd" id="1_aj8vr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="5_0t6w5"]
 [ext_resource type="PackedScene" uid="uid://7ji0m7kmxpj0" path="res://button.tscn" id="6_xkww5"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="7_yl743"]
+[ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="9_7nbkk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqca1"]
 texture = ExtResource("1_0blxg")
@@ -6544,6 +6545,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(262144, 2162688, 10)
 
 [node name="Buttons" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_ordjd")
 format = 2
 layer_0/modulate = Color(0.980392, 0, 0.0980392, 1)
@@ -6594,24 +6596,6 @@ position = Vector2(120, -120)
 [node name="Mirror12" parent="Overlay" instance=ExtResource("3_xmvvs")]
 position = Vector2(120, 72)
 
-[node name="Light" parent="." instance=ExtResource("4_afr1w")]
-position = Vector2(8, 152)
-rotation = 3.14159
-Length = 200
-Activate = true
-
-[node name="Light2" parent="." instance=ExtResource("4_afr1w")]
-position = Vector2(8, 72)
-rotation = 1.5708
-Length = 200
-Activate = true
-
-[node name="Light3" parent="." instance=ExtResource("4_afr1w")]
-position = Vector2(8, 72)
-rotation = -1.5708
-Length = 200
-Activate = true
-
 [node name="Button" parent="." instance=ExtResource("6_xkww5")]
 position = Vector2(-168, 8)
 rotation = -1.5708
@@ -6628,3 +6612,23 @@ position = Vector2(-184, 72)
 monitoring = false
 monitorable = false
 next_scene = "res://room_3.tscn"
+
+[node name="Light" parent="." instance=ExtResource("4_afr1w")]
+position = Vector2(8, 152)
+rotation = 3.14159
+Length = 200
+Activate = true
+
+[node name="Light2" parent="." instance=ExtResource("4_afr1w")]
+position = Vector2(8, 72)
+rotation = -1.5708
+Length = 200
+
+[node name="Light3" parent="." instance=ExtResource("4_afr1w")]
+position = Vector2(8, 72)
+rotation = 1.5708
+Length = 200
+
+[node name="Prisma" parent="." instance=ExtResource("9_7nbkk")]
+visible = false
+position = Vector2(8, 72)
