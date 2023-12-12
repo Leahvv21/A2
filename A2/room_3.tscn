@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=19 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_kdbyb"]
+[ext_resource type="Script" path="res://MirrorPlacements.gd" id="2_nnydr"]
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="3_e666b"]
 [ext_resource type="PackedScene" uid="uid://xuqqn2mjt0sa" path="res://mirror.tscn" id="4_1nrc4"]
 [ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="5_5ygjn"]
@@ -461,6 +462,7 @@ texture = ExtResource("1_3kya7")
 1:3/0 = 0
 1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
@@ -4338,6 +4340,9 @@ texture = ExtResource("1_3kya7")
 [sub_resource type="TileSet" id="TileSet_yewwa"]
 sources/0 = SubResource("TileSetAtlasSource_vxtce")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8fd2"]
+size = Vector2(10, 10)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfx5b"]
 texture = ExtResource("1_3kya7")
 0:0/0 = 0
@@ -6551,6 +6556,17 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-1376267, 2162688, 10)
 
+[node name="mirror_spot1" type="Area2D" parent="mirrors+prisma+AND"]
+position = Vector2(112, -160)
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_nnydr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mirrors+prisma+AND/mirror_spot1"]
+position = Vector2(8, -184)
+shape = SubResource("RectangleShape2D_y8fd2")
+
 [node name="Chest" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tjd4n")
 format = 2
@@ -6630,5 +6646,7 @@ rotation = 1.5708
 Length = 200
 Activate = true
 
+[connection signal="area_entered" from="mirrors+prisma+AND/mirror_spot1" to="mirrors+prisma+AND/mirror_spot1" method="_on_area_entered"]
+[connection signal="area_exited" from="mirrors+prisma+AND/mirror_spot1" to="mirrors+prisma+AND/mirror_spot1" method="_on_area_exited"]
 [connection signal="area_entered" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_exited"]

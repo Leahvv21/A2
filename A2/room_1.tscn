@@ -6574,18 +6574,24 @@ shape = SubResource("RectangleShape2D_sojy1")
 tile_set = SubResource("TileSet_7bajw")
 format = 2
 layer_0/tile_data = PackedInt32Array(-786432, 2555904, 14, -786413, 2555904, 14)
-script = ExtResource("4_wwfif")
 
-[node name="Area2D" type="Area2D" parent="MirrorPlacements"]
+[node name="mirror_spot1" type="Area2D" parent="MirrorPlacements"]
 collision_layer = 4
 collision_mask = 8
 monitorable = false
+script = ExtResource("4_wwfif")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorPlacements/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorPlacements/mirror_spot1"]
 position = Vector2(8, -184)
 shape = SubResource("RectangleShape2D_cb1qw")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="MirrorPlacements/Area2D"]
+[node name="mirror_spot2" type="Area2D" parent="MirrorPlacements"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("4_wwfif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorPlacements/mirror_spot2"]
 position = Vector2(312, -184)
 shape = SubResource("RectangleShape2D_c0fpv")
 
@@ -6612,5 +6618,7 @@ next_scene = "res://room_2.tscn"
 [connection signal="area_exited" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_exited"]
 [connection signal="area_entered" from="Chests/Chest2" to="Chests/Chest2" method="_on_area_entered"]
 [connection signal="area_exited" from="Chests/Chest2" to="Chests/Chest2" method="_on_area_exited"]
-[connection signal="area_entered" from="MirrorPlacements/Area2D" to="MirrorPlacements" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="MirrorPlacements/Area2D" to="MirrorPlacements" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="MirrorPlacements/mirror_spot1" to="MirrorPlacements/mirror_spot1" method="_on_area_entered"]
+[connection signal="area_exited" from="MirrorPlacements/mirror_spot1" to="MirrorPlacements/mirror_spot1" method="_on_area_exited"]
+[connection signal="area_entered" from="MirrorPlacements/mirror_spot2" to="MirrorPlacements/mirror_spot2" method="_on_area_entered"]
+[connection signal="area_exited" from="MirrorPlacements/mirror_spot2" to="MirrorPlacements/mirror_spot2" method="_on_area_exited"]
