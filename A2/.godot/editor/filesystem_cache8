@@ -1,37 +1,39 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702296610
-Area2D.gd::GDScript::-1::1702058114::0::1::::<>StaticBody2D<>::
-button.gd::GDScript::-1::1702294279::0::1::::<>Node2D<>::
-button.tscn::PackedScene::2265153457178583359::1702294797::0::1::::<><>::res://button.gd<>uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png
-Button_block.gd::GDScript::-1::1702294144::0::1::::<>StaticBody2D<>::
-Chests.gd::GDScript::-1::1701866578::0::1::::<>TileMap<>::
-colored-transparent_packed.png::CompressedTexture2D::7382787936422431742::1700057275::1700057279::1::::<><>::
-colored_packed.png::CompressedTexture2D::1410787926137834399::1700050685::1700051141::1::::<><>::
-constants.gd::GDScript::-1::1700050685::0::1::::<>Node<>::
-game.tscn::PackedScene::1531522365376869143::1702294791::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>uid://xuqqn2mjt0sa::::res://mirror.tscn
-garden.tscn::PackedScene::539222782095360124::1701472029::0::1::::<><>::uid://udnqarfniwrv
-gridMovement.gd::GDScript::-1::1700656359::0::1::::<>Node2D<>::
-grid_movement.tscn::PackedScene::4783779275201186085::1702294792::0::1::::<><>::res://gridMovement.gd
-icon.svg::CompressedTexture2D::7619101279106782816::1700050685::1701357770::1::::<><>::
-light.gd::GDScript::-1::1702292223::0::1::::<>Node2D<>::
-light.tscn::PackedScene::1701968282148002973::1702294792::0::1::::<><>::res://light.gd
-mirror.gd::GDScript::-1::1702291892::0::1::::<>Node2D<>::
-mirror.tscn::PackedScene::1656631728413981616::1702294792::0::1::::<><>::uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png<>res://mirror.gd<>uid://yipf0kja0xkf::::res://light.tscn<>res://StaticBody2D.gd
-MirrorPlacements.gd::GDScript::-1::1702042774::0::1::::<>TileMap<>::
-node_2d.tscn::PackedScene::9085725966358054634::1701686528::0::1::::<><>::uid://04kikmjd4qur
-overlay.gd::GDScript::-1::1702063336::0::1::::<>TileMap<>::
-overlay.png::CompressedTexture2D::4185114316755486168::1700058785::1700058788::1::::<><>::
-overlay.tscn::PackedScene::1815210046282688177::1702294792::0::1::::<><>::uid://b0vkhr4ydo2ee::::res://overlay.png<>res://overlay.gd
-player.gd::GDScript::-1::1701866578::0::1::::<>Sprite2D<>::
-player.tscn::PackedScene::7404787291872108644::1702294792::0::1::::<><>::res://player.gd<>uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png<>uid://cafke7qkrgpon::::res://grid_movement.tscn
-room_1.tscn::PackedScene::6393980346498268700::1702294793::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn<>res://Chests.gd<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>res://MirrorPlacements.gd<>uid://cu58hbme46i5q::::res://level change/level_change.tscn
-room_2.gd::GDScript::-1::1702294788::0::1::::<>Node2D<>::
-room_2.tscn::PackedScene::7844793915119216238::1702294872::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>res://room_2.gd<>uid://ddq61afo2g0mi::::res://player.tscn<>uid://xuqqn2mjt0sa::::res://mirror.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://7ji0m7kmxpj0::::res://button.tscn<>uid://cu58hbme46i5q::::res://level change/level_change.tscn
-room_3.tscn::PackedScene::8516593451103897050::1702294797::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn
-StaticBody2D.gd::GDScript::-1::1702291462::0::1::::<>StaticBody2D<>::
-::res://level change/::1702294796
-level_change.gd::GDScript::-1::1702289331::0::1::::<>Area2D<>::
-level_change.tscn::PackedScene::6240565805369997940::1702294796::0::1::::<><>::res://level change/level_change.gd
-pixellation_transition.gd::GDScript::-1::1702289331::0::1::::<>Sprite2D<>::
-pixellation_transition.gdshader::Shader::-1::1702289331::0::1::::<><>::
-pixellation_transition.tscn::PackedScene::4777983984666835876::1702289331::0::1::::<><>::res://level change/pixellation_transition.gdshader<>res://level change/pixellation_transition.gd
+::res://::1702378889
+Area2D.gd::GDScript::-1::1702221733::0::1::::<>StaticBody2D<>::
+button.gd::GDScript::-1::1702378872::0::1::::<>Node2D<>::
+button.tscn::PackedScene::2265153457178583359::1702378872::0::1::::<><>::res://button.gd<>uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png
+Button_block.gd::GDScript::-1::1702378872::0::1::::<>StaticBody2D<>::
+Chests.gd::GDScript::-1::1702052881::0::1::::<>TileMap<>::
+colored-transparent_packed.png::CompressedTexture2D::7382787936422431742::1700576845::1700576996::1::::<><>::
+colored_packed.png::CompressedTexture2D::1410787926137834399::1700576845::1700576996::1::::<><>::
+constants.gd::GDScript::-1::1700576845::0::1::::<>Node<>::
+game.tscn::PackedScene::1531522365376869143::1702378872::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>uid://xuqqn2mjt0sa::::res://mirror.tscn
+garden.tscn::PackedScene::539222782095360124::1701798484::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://bo2fniho637jo::::res://player.tscn
+gridMovement.gd::GDScript::-1::1701254941::0::1::::<>Node2D<>::
+grid_movement.tscn::PackedScene::4783779275201186085::1702223576::0::1::::<><>::res://gridMovement.gd
+icon.svg::CompressedTexture2D::7619101279106782816::1699977972::1702378890::1::::<><>::
+light.gd::GDScript::-1::1702378872::0::1::::<>Node2D<>::
+light.tscn::PackedScene::1701968282148002973::1702223576::0::1::::<><>::res://light.gd
+mirror.gd::GDScript::-1::1702378872::0::1::::<>Node2D<>::
+mirror.tscn::PackedScene::1656631728413981616::1702378872::0::1::::<><>::uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png<>res://mirror.gd<>uid://yipf0kja0xkf::::res://light.tscn<>res://StaticBody2D.gd
+MirrorPlacements.gd::GDScript::-1::1702378866::0::1::::<>TileMap<>::
+node_2d.tscn::PackedScene::9085725966358054634::1702052881::0::1::::<><>::uid://04kikmjd4qur::::res://overlay.tscn<>uid://yipf0kja0xkf::::res://light.tscn
+overlay.gd::GDScript::-1::1702221733::0::1::::<>TileMap<>::
+overlay.png::CompressedTexture2D::4185114316755486168::1700576845::1700576996::1::::<><>::
+overlay.tscn::PackedScene::1815210046282688177::1702378872::0::1::::<><>::uid://b0vkhr4ydo2ee::::res://overlay.png<>res://overlay.gd
+player.gd::GDScript::-1::1702052881::0::1::::<>Sprite2D<>::
+player.tscn::PackedScene::7404787291872108644::1702223576::0::1::::<><>::res://player.gd<>uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png<>uid://cafke7qkrgpon::::res://grid_movement.tscn
+prisma.gd::GDScript::-1::1702378872::0::1::::<>Node2D<>::
+prisma.tscn::PackedScene::1148992448427663926::1702378872::0::1::::<><>::res://prisma.gd<>uid://ddgjo6dv67i5s::::res://colored-transparent_packed.png<>uid://yipf0kja0xkf::::res://light.tscn
+room_1.tscn::PackedScene::6393980346498268700::1702378872::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn<>res://Chests.gd<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>res://MirrorPlacements.gd<>uid://cu58hbme46i5q::::res://level change/level_change.tscn
+room_2.gd::GDScript::-1::1702378872::0::1::::<>Node2D<>::
+room_2.tscn::PackedScene::7844793915119216238::1702378872::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>res://room_2.gd<>uid://ddq61afo2g0mi::::res://player.tscn<>uid://xuqqn2mjt0sa::::res://mirror.tscn<>uid://yipf0kja0xkf::::res://light.tscn<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://7ji0m7kmxpj0::::res://button.tscn<>uid://cu58hbme46i5q::::res://level change/level_change.tscn<>uid://qmt0c30rkt4q::::res://prisma.tscn
+room_3.tscn::PackedScene::8516593451103897050::1702378872::0::1::::<><>::uid://udnqarfniwrv::::res://colored_packed.png<>uid://ddq61afo2g0mi::::res://player.tscn<>uid://04kikmjd4qur::::res://overlay.tscn<>uid://xuqqn2mjt0sa::::res://mirror.tscn<>uid://qmt0c30rkt4q::::res://prisma.tscn<>uid://yipf0kja0xkf::::res://light.tscn
+StaticBody2D.gd::GDScript::-1::1702378872::0::1::::<>StaticBody2D<>::
+::res://level change/::1702221733
+level_change.gd::GDScript::-1::1702221733::0::1::::<>Area2D<>::
+level_change.tscn::PackedScene::6240565805369997940::1702221733::0::1::::<><>::res://level change/level_change.gd
+pixellation_transition.gd::GDScript::-1::1702221733::0::1::::<>Sprite2D<>::
+pixellation_transition.gdshader::Shader::-1::1702221733::0::1::::<><>::
+pixellation_transition.tscn::PackedScene::4777983984666835876::1702221733::0::1::::<><>::res://level change/pixellation_transition.gdshader<>res://level change/pixellation_transition.gd

@@ -2,7 +2,7 @@ extends Node2D
 var interact = false
 var first = true
 
-func _process(delta):
+func _process(_delta):
 	if $Sprite2D/RayCast2D.is_colliding():
 		$Sprite2D/Light.Activate = false
 	if interact && Input.is_action_just_pressed("flip"):
@@ -13,9 +13,9 @@ func _process(delta):
 		rotation_degrees += 90 
 		$Sprite2D/Light.light = false 
 
-func _on_area_2d_area_entered(area):
+func _on_area_2d_area_entered(_area):
 	interact = true
 
 
-func _on_area_2d_area_exited(area):
+func _on_area_2d_area_exited(_area):
 	interact = false

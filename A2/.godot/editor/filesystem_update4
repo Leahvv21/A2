@@ -1,16 +1,21 @@
-res://room_2.tscn
-res://mirror.tscn
-res://mirror.gd
-res://light.tscn
-res://light.gd
-res://StaticBody2D.gd
 res://game.tscn
+res://light.gd
 res://grid_movement.tscn
 res://player.tscn
 res://overlay.tscn
+res://light.tscn
+res://mirror.tscn
 res://room_1.tscn
+res://room_2.tscn
 res://level change/level_change.tscn
 res://room_3.tscn
 res://button.tscn
 res://prisma.tscn
+res://player.gd
+res://button.gd
+res://Chests.gd
+res://level change/level_change.gd
+res://mirror.gd
+res://MirrorPlacements.gd
 res://prisma.gd
+res://room_2.gd

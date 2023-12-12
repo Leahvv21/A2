@@ -6554,7 +6554,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-917504, 524288, 6, -655360, 589824, 6)
 
 [node name="Player" parent="." instance=ExtResource("2_kdbyb")]
-position = Vector2(-215, 72)
+position = Vector2(-216, 72)
 
 [node name="desks" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bwqh5")

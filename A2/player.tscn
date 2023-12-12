@@ -20,7 +20,7 @@ self_node = NodePath("..")
 zoom = Vector2(4, 4)
 
 [node name="Label" type="Label" parent="Camera2D"]
-visible = false
+z_index = 1
 offset_left = -140.0
 offset_top = 63.0
 offset_right = -77.0
