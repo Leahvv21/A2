@@ -6549,18 +6549,24 @@ position = Vector2(8, 8)
 tile_set = SubResource("TileSet_uthly")
 format = 2
 layer_0/tile_data = PackedInt32Array(-720902, 524288, 6, -1179648, 524288, 6, -524269, 0, 0, -720905, 589824, 6)
-script = ExtResource("3_u4qp6")
 
-[node name="Area2D" type="Area2D" parent="Chests"]
+[node name="Chest1" type="Area2D" parent="Chests"]
 collision_layer = 4
 collision_mask = 8
 monitorable = false
+script = ExtResource("3_u4qp6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chests/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chests/Chest1"]
 position = Vector2(8, -280)
 shape = SubResource("RectangleShape2D_7wajy")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chests/Area2D"]
+[node name="Chest2" type="Area2D" parent="Chests"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("3_u4qp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chests/Chest2"]
 position = Vector2(-88, -184)
 shape = SubResource("RectangleShape2D_sojy1")
 
@@ -6584,7 +6590,6 @@ position = Vector2(312, -184)
 shape = SubResource("RectangleShape2D_c0fpv")
 
 [node name="Desks" type="TileMap" parent="."]
-position = Vector2(8, -24)
 tile_set = SubResource("TileSet_i7v7n")
 format = 2
 layer_0/tile_data = PackedInt32Array(-524269, 524289, 7)
@@ -6603,7 +6608,9 @@ layer_0/tile_data = PackedInt32Array(-1245220, 1, 0, -1179684, 1, 0, -1114148, 1
 position = Vector2(312, -296)
 next_scene = "res://room_2.tscn"
 
-[connection signal="area_entered" from="Chests/Area2D" to="Chests" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Chests/Area2D" to="Chests" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_entered"]
+[connection signal="area_exited" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_exited"]
+[connection signal="area_entered" from="Chests/Chest2" to="Chests/Chest2" method="_on_area_entered"]
+[connection signal="area_exited" from="Chests/Chest2" to="Chests/Chest2" method="_on_area_exited"]
 [connection signal="area_entered" from="MirrorPlacements/Area2D" to="MirrorPlacements" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="MirrorPlacements/Area2D" to="MirrorPlacements" method="_on_area_2d_area_exited"]

@@ -1,15 +1,18 @@
-extends TileMap
+extends Area2D
 
 var interact = false 
+var used = false
 
 func _process(_delta):
-	if interact && Input.is_action_just_pressed("interact"):
-		$"../Player".add_mirror(1)
+	if interact && Input.is_action_just_pressed("interact") && !used:
+		$"../../Player".add_mirror(1)
+		used = true
 		
 
-func _on_area_2d_area_entered(_area):
+
+func _on_area_entered(_area):
 	interact = true
 
 
-func _on_area_2d_area_exited(_area):
-	interact = false 
+func _on_area_exited(_area):
+	interact = false

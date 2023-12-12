@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=17 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
+[ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_kdbyb"]
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="3_e666b"]
 [ext_resource type="PackedScene" uid="uid://xuqqn2mjt0sa" path="res://mirror.tscn" id="4_1nrc4"]
@@ -5421,6 +5422,8 @@ texture = ExtResource("1_3kya7")
 [sub_resource type="TileSet" id="TileSet_tjd4n"]
 sources/0 = SubResource("TileSetAtlasSource_wfx5b")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtaax"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_53fcg"]
 texture = ExtResource("1_3kya7")
 0:0/0 = 0
@@ -6553,6 +6556,17 @@ tile_set = SubResource("TileSet_tjd4n")
 format = 2
 layer_0/tile_data = PackedInt32Array(-917504, 524288, 6, -655360, 589824, 6)
 
+[node name="Chest1" type="Area2D" parent="Chest"]
+position = Vector2(0, 64)
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_hqfl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Chest1"]
+position = Vector2(8, -280)
+shape = SubResource("RectangleShape2D_dtaax")
+
 [node name="Player" parent="." instance=ExtResource("2_kdbyb")]
 position = Vector2(-216, 72)
 
@@ -6615,3 +6629,6 @@ position = Vector2(-184, 72)
 rotation = 1.5708
 Length = 200
 Activate = true
+
+[connection signal="area_entered" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_entered"]
+[connection signal="area_exited" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_exited"]
