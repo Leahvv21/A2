@@ -1,18 +1,17 @@
-res://grid_movement.tscn
-res://light.gd
-res://gridMovement.gd
-res://mirror.gd
-res://player.tscn
-res://player.gd
-res://mirror.tscn
-res://MirrorPlacements.gd
 res://game.tscn
+res://grid_movement.tscn
+res://player.tscn
 res://overlay.tscn
 res://light.tscn
+res://mirror.tscn
 res://room_1.tscn
 res://room_2.tscn
-res://level change/level_change.tscn
 res://room_3.tscn
+res://level change/level_change.tscn
 res://button.tscn
 res://prisma.tscn
-res://Chests.gd
+res://and_gate.tscn
+res://and_gate.gd
+res://prisma.gd
+res://MirrorPlacements.gd
+res://overlay.gd

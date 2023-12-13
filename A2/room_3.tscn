@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=23 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://xuqqn2mjt0sa" path="res://mirror.tscn" id="4_1nrc4"]
 [ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="5_5ygjn"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="6_8jovw"]
+[ext_resource type="PackedScene" uid="uid://e52msrr1878w" path="res://and_gate.tscn" id="9_7hwtl"]
+[ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="9_hxfjl"]
+[ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="11_bw5ms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjpvo"]
 texture = ExtResource("1_3kya7")
@@ -949,6 +952,7 @@ texture = ExtResource("1_3kya7")
 16:6/0 = 0
 16:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:6/0/physics_layer_0/angular_velocity = 0.0
+16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:6/0 = 0
 17:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:6/0/physics_layer_0/angular_velocity = 0.0
@@ -4340,9 +4344,6 @@ texture = ExtResource("1_3kya7")
 [sub_resource type="TileSet" id="TileSet_yewwa"]
 sources/0 = SubResource("TileSetAtlasSource_vxtce")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8fd2"]
-size = Vector2(10, 10)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfx5b"]
 texture = ExtResource("1_3kya7")
 0:0/0 = 0
@@ -6513,6 +6514,13 @@ texture = ExtResource("1_3kya7")
 [sub_resource type="TileSet" id="TileSet_bwqh5"]
 sources/0 = SubResource("TileSetAtlasSource_53fcg")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5tm0"]
+atlas = ExtResource("9_hxfjl")
+region = Rect2(624, 224, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8fd2"]
+size = Vector2(10, 10)
+
 [node name="Room3" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -6556,17 +6564,6 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-1376267, 2162688, 10)
 
-[node name="mirror_spot1" type="Area2D" parent="mirrors+prisma+AND"]
-position = Vector2(112, -160)
-collision_layer = 4
-collision_mask = 8
-monitorable = false
-script = ExtResource("2_nnydr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mirrors+prisma+AND/mirror_spot1"]
-position = Vector2(8, -184)
-shape = SubResource("RectangleShape2D_y8fd2")
-
 [node name="Chest" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tjd4n")
 format = 2
@@ -6590,6 +6587,32 @@ position = Vector2(-216, 72)
 tile_set = SubResource("TileSet_bwqh5")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1900560, 262144, 7, 393202, 524288, 7)
+
+[node name="Prisma" parent="." instance=ExtResource("5_5ygjn")]
+position = Vector2(-168, -344)
+rotation = 1.5708
+
+[node name="Light" parent="." instance=ExtResource("6_8jovw")]
+position = Vector2(-184, 72)
+rotation = 1.5708
+Length = 200
+Activate = true
+
+[node name="AND Gate" parent="." instance=ExtResource("9_7hwtl")]
+position = Vector2(8, -296)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, -344)
+texture = SubResource("AtlasTexture_l5tm0")
+
+[node name="mirror_spot1" type="Area2D" parent="Sprite2D"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_nnydr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/mirror_spot1"]
+shape = SubResource("RectangleShape2D_y8fd2")
 
 [node name="Overlay" parent="." instance=ExtResource("3_e666b")]
 visible = false
@@ -6633,20 +6656,12 @@ position = Vector2(152, -392)
 [node name="Mirror13" parent="Overlay" instance=ExtResource("4_1nrc4")]
 position = Vector2(152, -440)
 
-[node name="Mirror14" parent="Overlay" instance=ExtResource("4_1nrc4")]
-position = Vector2(152, -440)
+[node name="Level_change" parent="." instance=ExtResource("11_bw5ms")]
+position = Vector2(-232, -536)
+monitorable = false
+next_scene = "res://room_1.tscn"
 
-[node name="Prisma" parent="." instance=ExtResource("5_5ygjn")]
-position = Vector2(-168, -344)
-rotation = 1.5708
-
-[node name="Light" parent="." instance=ExtResource("6_8jovw")]
-position = Vector2(-184, 72)
-rotation = 1.5708
-Length = 200
-Activate = true
-
-[connection signal="area_entered" from="mirrors+prisma+AND/mirror_spot1" to="mirrors+prisma+AND/mirror_spot1" method="_on_area_entered"]
-[connection signal="area_exited" from="mirrors+prisma+AND/mirror_spot1" to="mirrors+prisma+AND/mirror_spot1" method="_on_area_exited"]
 [connection signal="area_entered" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_exited"]
+[connection signal="area_entered" from="Sprite2D/mirror_spot1" to="Sprite2D/mirror_spot1" method="_on_area_entered"]
+[connection signal="area_exited" from="Sprite2D/mirror_spot1" to="Sprite2D/mirror_spot1" method="_on_area_exited"]
