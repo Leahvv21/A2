@@ -10,7 +10,6 @@ border_width_right = 3
 border_width_bottom = 3
 
 [node name="Textbox" type="CanvasLayer"]
-follow_viewport_enabled = true
 script = ExtResource("1_0q7b2")
 text = "hello hello"
 

@@ -17,36 +17,38 @@ var interact = false
 func _ready():
 	print('starting state is READY')
 	hide_textbox()
-	add_text(text)
 
 func _process(delta):
 	match Current_State:
 		State.READY:
-			pass
+			if interact && Input.is_action_just_pressed("interact"):
+				show_textbox()
 		State.READING:
 			pass
 		State.FINISHED:
-			if Input.is_action_just_pressed("interact"):
-				change_state(State.READY)
+			if Input.is_action_just_pressed("interact") || Input.get_vector("left", "right", "up", "down") != Vector2.ZERO:
 				hide_textbox()
-	if interact && Input.is_action_just_pressed("interact"):
-		show_textbox()
+			pass
+	#if interact && Input.is_action_just_pressed("interact"):
+		#show_textbox()
 
 func hide_textbox():
 	start_symbol.text = ''
 	end_symbol.text = ''
-	label.text = ''
+	#label.text = ''
 	textbox_container.hide()
+	change_state(State.READY)
 
 func show_textbox():
 	start_symbol.text = '*'
 	textbox_container.show()
 	end_symbol.text = 'V'
+	change_state(State.FINISHED)
 
 func add_text(next_test):
 	label.text = next_test
-	change_state(State.FINISHED)
-	show_textbox()
+	#change_state(State.FINISHED)
+	#show_textbox()
 
 func change_state(next_state):
 	Current_State = next_state

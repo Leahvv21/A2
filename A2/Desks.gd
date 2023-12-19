@@ -1,16 +1,16 @@
 extends Area2D
 
-var interact = false 
+var interact = true
 
 func _process(_delta):
-	if interact && Input.is_action_just_pressed("interact"):
-		print("yassss")
+	pass
 
 
 func _on_area_entered(_area):
-	interact = true
+	$"../../Textbox".add_text("First Desk")
+	$"../../Textbox".interact = true
 
 
 func _on_area_exited(_area):
-	interact = false
+	$"../../Textbox".interact = false
 

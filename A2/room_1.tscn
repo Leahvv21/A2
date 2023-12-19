@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cxdj6l8tw3thc"]
+[gd_scene load_steps=23 format=3 uid="uid://cxdj6l8tw3thc"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_u8b3q"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_5w0fv"]
+[ext_resource type="PackedScene" uid="uid://bos8rpu5pdhlq" path="res://textbox/textbox.tscn" id="3_cp8mm"]
 [ext_resource type="Script" path="res://Chests.gd" id="3_u4qp6"]
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="3_uofrc"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="4_vdufl"]
@@ -6626,6 +6627,8 @@ layer_0/tile_data = PackedInt32Array(-1245220, 1, 0, -1179684, 1, 0, -1114148, 1
 [node name="Level_change" parent="." instance=ExtResource("7_8rw0p")]
 position = Vector2(312, -296)
 next_scene = "res://room_2.tscn"
+
+[node name="Textbox" parent="." instance=ExtResource("3_cp8mm")]
 
 [connection signal="area_entered" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_exited"]
