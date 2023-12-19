@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://bos8rpu5pdhlq"]
+
+[ext_resource type="Script" path="res://textbox/textbox.gd" id="1_0q7b2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nulj"]
+bg_color = Color(0, 0, 0, 0.52549)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Textbox" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_0q7b2")
+text = "hello hello"
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.718
+anchor_right = 0.985
+anchor_bottom = 0.974
+offset_left = -16.128
+offset_top = 16.736
+offset_right = 17.2799
+offset_bottom = 16.848
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = -16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2nulj")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "*"
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 35
+text = "add text in the export value of the Textbox node"
+autowrap_mode = 2
+clip_text = true
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 35
+text = "V"
