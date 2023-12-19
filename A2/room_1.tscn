@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cxdj6l8tw3thc"]
+[gd_scene load_steps=22 format=3 uid="uid://cxdj6l8tw3thc"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_u8b3q"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_5w0fv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="3_uofrc"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="4_vdufl"]
 [ext_resource type="Script" path="res://MirrorPlacements.gd" id="4_wwfif"]
+[ext_resource type="Script" path="res://Desks.gd" id="5_wmrdt"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="7_8rw0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djvwu"]
@@ -6520,6 +6521,8 @@ texture = ExtResource("1_u8b3q")
 [sub_resource type="TileSet" id="TileSet_i7v7n"]
 sources/1 = SubResource("TileSetAtlasSource_umlki")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgii"]
+
 [node name="Room1" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -6600,6 +6603,16 @@ tile_set = SubResource("TileSet_i7v7n")
 format = 2
 layer_0/tile_data = PackedInt32Array(-524269, 524289, 7)
 
+[node name="Desk1" type="Area2D" parent="Desks"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("5_wmrdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
+position = Vector2(312, -120)
+shape = SubResource("RectangleShape2D_ajgii")
+
 [node name="Light" parent="." instance=ExtResource("4_vdufl")]
 position = Vector2(8, 24)
 rotation = 3.14159
@@ -6622,3 +6635,5 @@ next_scene = "res://room_2.tscn"
 [connection signal="area_exited" from="MirrorPlacements/mirror_spot1" to="MirrorPlacements/mirror_spot1" method="_on_area_exited"]
 [connection signal="area_entered" from="MirrorPlacements/mirror_spot2" to="MirrorPlacements/mirror_spot2" method="_on_area_entered"]
 [connection signal="area_exited" from="MirrorPlacements/mirror_spot2" to="MirrorPlacements/mirror_spot2" method="_on_area_exited"]
+[connection signal="area_entered" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_entered"]
+[connection signal="area_exited" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_exited"]

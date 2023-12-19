@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://dj1cuy0oi352a"]
+[gd_scene load_steps=20 format=3 uid="uid://dj1cuy0oi352a"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_0blxg"]
 [ext_resource type="Script" path="res://room_2.gd" id="1_aj8vr"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_kmwqr"]
 [ext_resource type="PackedScene" uid="uid://xuqqn2mjt0sa" path="res://mirror.tscn" id="3_xmvvs"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="4_afr1w"]
+[ext_resource type="Script" path="res://Desks.gd" id="4_peova"]
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="5_0t6w5"]
 [ext_resource type="PackedScene" uid="uid://7ji0m7kmxpj0" path="res://button.tscn" id="6_xkww5"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="7_yl743"]
@@ -6507,6 +6508,8 @@ texture = ExtResource("1_0blxg")
 [sub_resource type="TileSet" id="TileSet_3acta"]
 sources/0 = SubResource("TileSetAtlasSource_f6hah")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt1qp"]
+
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_aj8vr")
 
@@ -6558,6 +6561,16 @@ position = Vector2(8, 136)
 tile_set = SubResource("TileSet_3acta")
 format = 2
 layer_0/tile_data = PackedInt32Array(524286, 524288, 7, 11, 524288, 7, -720896, 262144, 7)
+
+[node name="Desk1" type="Area2D" parent="Desks"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("4_peova")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
+position = Vector2(184, 8)
+shape = SubResource("RectangleShape2D_tt1qp")
 
 [node name="Overlay" parent="." instance=ExtResource("5_0t6w5")]
 visible = false
@@ -6632,3 +6645,6 @@ Length = 200
 [node name="Prisma" parent="." instance=ExtResource("9_7nbkk")]
 visible = false
 position = Vector2(8, 72)
+
+[connection signal="area_entered" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_entered"]
+[connection signal="area_exited" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_exited"]

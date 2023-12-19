@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=25 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://MirrorPlacements.gd" id="2_nnydr"]
 [ext_resource type="PackedScene" uid="uid://04kikmjd4qur" path="res://overlay.tscn" id="3_e666b"]
 [ext_resource type="PackedScene" uid="uid://xuqqn2mjt0sa" path="res://mirror.tscn" id="4_1nrc4"]
+[ext_resource type="Script" path="res://Desks.gd" id="4_wtadk"]
 [ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="5_5ygjn"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="6_8jovw"]
 [ext_resource type="PackedScene" uid="uid://e52msrr1878w" path="res://and_gate.tscn" id="9_7hwtl"]
@@ -6514,6 +6515,8 @@ texture = ExtResource("1_3kya7")
 [sub_resource type="TileSet" id="TileSet_bwqh5"]
 sources/0 = SubResource("TileSetAtlasSource_53fcg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvjlq"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5tm0"]
 atlas = ExtResource("9_hxfjl")
 region = Rect2(624, 224, 16, 16)
@@ -6583,10 +6586,20 @@ shape = SubResource("RectangleShape2D_dtaax")
 [node name="Player" parent="." instance=ExtResource("2_kdbyb")]
 position = Vector2(-216, 72)
 
-[node name="desks" type="TileMap" parent="."]
+[node name="Desks" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bwqh5")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1900560, 262144, 7, 393202, 524288, 7)
+
+[node name="Desk1" type="Area2D" parent="Desks"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("4_wtadk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
+position = Vector2(-280, -440)
+shape = SubResource("RectangleShape2D_kvjlq")
 
 [node name="Prisma" parent="." instance=ExtResource("5_5ygjn")]
 position = Vector2(-168, -344)
@@ -6663,5 +6676,7 @@ next_scene = "res://room_1.tscn"
 
 [connection signal="area_entered" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_exited"]
+[connection signal="area_entered" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_entered"]
+[connection signal="area_exited" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_exited"]
 [connection signal="area_entered" from="Sprite2D/mirror_spot1" to="Sprite2D/mirror_spot1" method="_on_area_entered"]
 [connection signal="area_exited" from="Sprite2D/mirror_spot1" to="Sprite2D/mirror_spot1" method="_on_area_exited"]

@@ -5,6 +5,6 @@ func _process(_delta):
 		$Sprite2D/Light.Activate = false
 		$Sprite2D/Light3.Activate = false
 	else:
-		print("Activate Lights Prisma")
+		#print("Activate Lights Prisma")
 		$Sprite2D/Light.Activate = true
 		$Sprite2D/Light3.Activate = true
