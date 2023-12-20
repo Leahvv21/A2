@@ -8,6 +8,8 @@ func _ready():
 	pass
  
 func _process(_delta):
+	if Input.is_action_just_pressed("quit"):
+		get_tree().change_scene_to_file("res://Menu/MainMenu.tscn")
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	$GridMovement.move(input_direction)
 	$"../UI/MirrorCount".text = "Mirror Count: %s" % mirror_count

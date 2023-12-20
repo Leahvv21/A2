@@ -1,4 +1,6 @@
 res://player.tscn
+res://light.gd
+res://player.gd
 res://room_1.tscn
 res://room_2.tscn
 res://room_3.tscn
@@ -9,4 +11,3 @@ res://Menu/levelselect.tscn
 res://Menu/Credits.tscn
 res://Menu/controls.tscn
 res://garden.tscn
-res://Desks.gd
