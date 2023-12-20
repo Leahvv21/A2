@@ -11,7 +11,6 @@ border_width_bottom = 3
 
 [node name="Textbox" type="CanvasLayer"]
 script = ExtResource("1_0q7b2")
-text = "hello hello"
 
 [node name="TextboxContainer" type="MarginContainer" parent="."]
 anchors_preset = -1
@@ -51,14 +50,14 @@ layout_mode = 2
 [node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 12
 text = "*"
 
 [node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 12
 text = "add text in the export value of the Textbox node"
 autowrap_mode = 2
 clip_text = true
@@ -66,5 +65,5 @@ clip_text = true
 [node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 12
 text = "V"

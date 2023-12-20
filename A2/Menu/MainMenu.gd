@@ -10,11 +10,6 @@ func _on_new_game_button_pressed():
 
 func _on_level_s_button_pressed():
 	get_tree().change_scene_to_file("res://Menu/levelselect.tscn")
-	
-
-
-func _on_settings_button_pressed():
-	print("settings")
 
 
 func _on_creditsbutton_pressed():
@@ -51,4 +46,4 @@ func _on_backtomainmenu_pressed():
 
 
 func _on_controlsbutton_pressed():
-	get_tree().change_scene_to_file("res://Menu/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://Menu/controls.tscn")

@@ -28,6 +28,8 @@ func _process(_delta):
 		State.FINISHED:
 			if Input.is_action_just_pressed("interact") || Input.get_vector("left", "right", "up", "down") != Vector2.ZERO:
 				hide_textbox()
+				if label.text == "In loving memory of Lumière Sombrio. 1957 – 1991.":
+					get_tree().change_scene_to_file("res://Menu/MainMenu.tscn")
 			pass
 	#if interact && Input.is_action_just_pressed("interact"):
 		#show_textbox()

@@ -5590,6 +5590,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
+text = "In need of self-reflection, mirrors show the way."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
 position = Vector2(-8, -8)
@@ -5600,6 +5601,11 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
+text = "In one of the shelves is an old letter addressed to ‘Lumière Sombrio’. They must have been the previous owner of this house.
+It reads: 
+Hello Lumière, it has been a while since the last time we wrote to each other. And what do I discover, that you moved to the Lumen mansion. You know the rumours about that place right?
+Anyway, are you any closer to achieving your dream of becoming a writer? You always wanted to become one. Let us meet each other again soon.
+Sincerely, Nia Miroir"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2"]
 position = Vector2(312, -120)
@@ -5610,6 +5616,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
+text = "It’s an old desk. It’s covered in a thick layer of dust and it looks like it’s mostly rotten."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(376, -184)
