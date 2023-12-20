@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cxdj6l8tw3thc"]
+[gd_scene load_steps=30 format=3 uid="uid://bv4iefeihglp0"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_u8b3q"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_5w0fv"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cd8ukhdp3g7op" path="res://Sounds/Mirror_place.wav" id="6_q703s"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="7_8rw0p"]
 [ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="13_fb3dr"]
+[ext_resource type="AudioStream" uid="uid://ndqv42i5leak" path="res://Sounds/IVGM.mp3" id="14_2kfb5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djvwu"]
 texture = ExtResource("1_u8b3q")
@@ -5590,7 +5591,6 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
-text = "In need of self-reflection, mirrors show the way."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
 position = Vector2(-8, -8)
@@ -5601,11 +5601,6 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
-text = "In one of the shelves is an old letter addressed to ‘Lumière Sombrio’. They must have been the previous owner of this house.
-It reads: 
-Hello Lumière, it has been a while since the last time we wrote to each other. And what do I discover, that you moved to the Lumen mansion. You know the rumours about that place right?
-Anyway, are you any closer to achieving your dream of becoming a writer? You always wanted to become one. Let us meet each other again soon.
-Sincerely, Nia Miroir"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2"]
 position = Vector2(312, -120)
@@ -5616,7 +5611,6 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("5_wmrdt")
-text = "It’s an old desk. It’s covered in a thick layer of dust and it looks like it’s mostly rotten."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(376, -184)
@@ -5640,6 +5634,11 @@ next_scene = "res://room_2.tscn"
 
 [node name="SFX" type="AudioStreamPlayer" parent="Textbox"]
 stream = ExtResource("13_fb3dr")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2kfb5")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="area_entered" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_exited"]
