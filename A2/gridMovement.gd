@@ -23,6 +23,7 @@ func move(direction: Vector2) -> void:
 		# Allow movement only if no collision in next tile
 		if !$RayCast2D.is_colliding():
 			moving_direction = movement
+			$SFX.play()
 			
 			var new_position = self_node.global_position + (moving_direction * Constants.TILE_SIZE)
 			

@@ -9,3 +9,4 @@ res://MirrorPlacements.gd
 res://Chests.gd
 res://player.gd
 res://textbox/textbox.gd
+res://gridMovement.gd

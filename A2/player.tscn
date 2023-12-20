@@ -17,6 +17,9 @@ script = ExtResource("1_0ucxf")
 [node name="GridMovement" parent="." node_paths=PackedStringArray("self_node") instance=ExtResource("3_xba6d")]
 self_node = NodePath("..")
 
+[node name="SFX" type="AudioStreamPlayer" parent="GridMovement"]
+stream = ExtResource("4_1ystn")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
@@ -35,6 +38,3 @@ collision_mask = 129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_12swi")
-
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_1ystn")
