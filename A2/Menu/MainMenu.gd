@@ -24,16 +24,16 @@ func _on_quitbutton_pressed():
 
 
 func _on_level_1_button_pressed():
-	print("level1")
+	get_tree().change_scene_to_file("res://room_1.tscn")
 	
 
 
 func _on_level_2_button_pressed():
-	print("level2")
+	get_tree().change_scene_to_file("res://room_2.tscn")
 
 
 func _on_level_3_button_pressed():
-	print("level3")
+	get_tree().change_scene_to_file("res://room_3.tscn")
 
 
 func _on_backbutton_pressed():
