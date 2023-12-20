@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dj1cuy0oi352a"]
+[gd_scene load_steps=27 format=3 uid="uid://dj1cuy0oi352a"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_0blxg"]
 [ext_resource type="Script" path="res://room_2.gd" id="1_aj8vr"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="9_pcclh"]
 [ext_resource type="PackedScene" uid="uid://bos8rpu5pdhlq" path="res://textbox/textbox.tscn" id="11_0fw6v"]
 [ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="13_2mdha"]
+[ext_resource type="AudioStream" uid="uid://ndqv42i5leak" path="res://Sounds/IVGM.mp3" id="14_rqpgt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqca1"]
 texture = ExtResource("1_0blxg")
@@ -6719,6 +6720,10 @@ position = Vector2(8, 72)
 
 [node name="SFX" type="AudioStreamPlayer" parent="Textbox"]
 stream = ExtResource("13_2mdha")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_rqpgt")
+autoplay = true
 
 [connection signal="area_entered" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_entered"]
 [connection signal="area_exited" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_exited"]

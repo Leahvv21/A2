@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=32 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bos8rpu5pdhlq" path="res://textbox/textbox.tscn" id="13_8g0iq"]
 [ext_resource type="AudioStream" uid="uid://cd8ukhdp3g7op" path="res://Sounds/Mirror_place.wav" id="13_f8j7f"]
 [ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="14_y3w4a"]
+[ext_resource type="AudioStream" uid="uid://ndqv42i5leak" path="res://Sounds/IVGM.mp3" id="17_qeddj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjpvo"]
 texture = ExtResource("1_3kya7")
@@ -5678,7 +5679,6 @@ shape = SubResource("RectangleShape2D_y8fd2")
 
 [node name="SFX" type="AudioStreamPlayer" parent="Sprite2D/mirror_spot1"]
 stream = ExtResource("13_f8j7f")
-volume_db = -10.0
 pitch_scale = 0.5
 
 [node name="Level_change" parent="." instance=ExtResource("11_bw5ms")]
@@ -5691,6 +5691,11 @@ next_scene = "res://Menu/MainMenu.tscn"
 
 [node name="SFX" type="AudioStreamPlayer" parent="Textbox"]
 stream = ExtResource("14_y3w4a")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_qeddj")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="area_entered" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chest/Chest1" to="Chest/Chest1" method="_on_area_exited"]

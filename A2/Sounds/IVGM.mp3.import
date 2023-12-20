@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/IVGM.mp3-409c2d0b82fbc082c1d19a914c9a0b4d.mp3
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
