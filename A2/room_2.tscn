@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dj1cuy0oi352a"]
+[gd_scene load_steps=28 format=3 uid="uid://dj1cuy0oi352a"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_0blxg"]
 [ext_resource type="Script" path="res://room_2.gd" id="1_aj8vr"]
@@ -6514,6 +6514,8 @@ sources/0 = SubResource("TileSetAtlasSource_f6hah")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tt1qp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d4ki"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3mby"]
 atlas = ExtResource("9_pcclh")
 region = Rect2(48, 144, 16, 16)
@@ -6599,6 +6601,13 @@ text = "Closed off from everything, I have to light up all switches in order to 
 position = Vector2(-8, 120)
 shape = SubResource("RectangleShape2D_tt1qp")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1/CollisionShape2D2"]
+position = Vector2(-8, 119)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_4d4ki")
+
 [node name="Desk2" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -6615,6 +6624,13 @@ Sincerely, Nia Miroir
 position = Vector2(184, 8)
 shape = SubResource("RectangleShape2D_tt1qp")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk2"]
+position = Vector2(184, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_4d4ki")
+
 [node name="Desk3" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -6625,6 +6641,13 @@ text = "It’s an old bookshelf. It’s covered in a thick layer of dust and it 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(-168, -56)
 shape = SubResource("RectangleShape2D_tt1qp")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk3"]
+position = Vector2(-168, -56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_4d4ki")
 
 [node name="Desk4" type="Area2D" parent="Desks"]
 collision_layer = 4
@@ -6637,6 +6660,13 @@ text = "Why is there a skull on this desk? And why does it look like it’s star
 position = Vector2(8, -168)
 shape = SubResource("RectangleShape2D_tt1qp")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk4"]
+position = Vector2(8, -168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_4d4ki")
+
 [node name="Desk5" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -6647,6 +6677,13 @@ text = "There are a bunch of old books on the shelves. One of them seems to be p
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5"]
 position = Vector2(120, -168)
 shape = SubResource("RectangleShape2D_tt1qp")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk5"]
+position = Vector2(120, -167)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_4d4ki")
 
 [node name="Overlay" parent="." instance=ExtResource("5_0t6w5")]
 visible = false

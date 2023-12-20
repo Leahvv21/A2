@@ -2,3 +2,9 @@ res://room_2.tscn
 res://room_3.tscn
 res://Menu/MainMenu.tscn
 res://Menu/Credits.tscn
+res://player.tscn
+res://room_1.tscn
+res://overlay.tscn
+res://mirror.tscn
+res://Menu/levelselect.tscn
+res://Menu/controls.tscn

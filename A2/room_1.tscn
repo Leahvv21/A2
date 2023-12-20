@@ -5597,6 +5597,13 @@ text = "In need of self-reflection, mirrors show the way."
 position = Vector2(-8, -8)
 shape = SubResource("RectangleShape2D_ajgii")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1/CollisionShape2D2"]
+position = Vector2(-8, -8)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_unl6u")
+
 [node name="Desk2" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -5613,6 +5620,13 @@ Sincerely, Nia Miroir
 position = Vector2(312, -120)
 shape = SubResource("RectangleShape2D_ajgii")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2/CollisionShape2D2"]
+position = Vector2(312, -120)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_unl6u")
+
 [node name="Desk3" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -5623,6 +5637,13 @@ text = "It’s an old desk. It’s covered in a thick layer of dust and it looks
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(376, -184)
 shape = SubResource("RectangleShape2D_ajgii")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3/CollisionShape2D2"]
+position = Vector2(376, -184)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_unl6u")
 
 [node name="Light" parent="." instance=ExtResource("4_vdufl")]
 position = Vector2(8, 24)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=33 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
@@ -5462,6 +5462,8 @@ sources/0 = SubResource("TileSetAtlasSource_53fcg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvjlq"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwy6w"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5tm0"]
 atlas = ExtResource("9_hxfjl")
 region = Rect2(624, 224, 16, 16)
@@ -5606,6 +5608,13 @@ text = "One becomes three, three become one."
 position = Vector2(-216, 88)
 shape = SubResource("RectangleShape2D_kvjlq")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk1"]
+position = Vector2(-216, 88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_pwy6w")
+
 [node name="Desk2" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -5616,6 +5625,13 @@ text = "It’s a bed covered in dust. Clearly no one has slept here in quite som
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2"]
 position = Vector2(-280, -440)
 shape = SubResource("RectangleShape2D_kvjlq")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk2"]
+position = Vector2(-280, -440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_pwy6w")
 
 [node name="Desk3" type="Area2D" parent="Desks"]
 collision_layer = 4
@@ -5628,6 +5644,13 @@ text = "There are a bunch of old books on the shelves. Some of them over 40 year
 position = Vector2(-248, -472)
 shape = SubResource("RectangleShape2D_kvjlq")
 
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk3"]
+position = Vector2(-248, -472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_pwy6w")
+
 [node name="Desk4" type="Area2D" parent="Desks"]
 collision_layer = 4
 collision_mask = 8
@@ -5638,6 +5661,13 @@ text = "Different wines are neatly stacked. Included are even the now banned ‘
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4"]
 position = Vector2(8, -472)
 shape = SubResource("RectangleShape2D_kvjlq")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk4"]
+position = Vector2(8, -472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_pwy6w")
 
 [node name="Desk5" type="Area2D" parent="Desks"]
 collision_layer = 4
@@ -5653,6 +5683,13 @@ Sincerely, Nia Reflexion"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5"]
 position = Vector2(184, -248)
 shape = SubResource("RectangleShape2D_kvjlq")
+
+[node name="CollisionShape2D2" type="StaticBody2D" parent="Desks/Desk5"]
+position = Vector2(184, -248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5/CollisionShape2D2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_pwy6w")
 
 [node name="Grave" type="Area2D" parent="Desks"]
 collision_layer = 4
@@ -5695,7 +5732,7 @@ pitch_scale = 0.5
 position = Vector2(-232, -536)
 monitoring = false
 monitorable = false
-next_scene = "res://Menu/MainMenu.tscn"
+next_scene = "res://Menu/Credits.tscn"
 
 [node name="Textbox" parent="." instance=ExtResource("13_8g0iq")]
 
