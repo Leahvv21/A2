@@ -1,5 +1,4 @@
 res://player.tscn
-res://light.gd
 res://overlay.tscn
 res://light.tscn
 res://mirror.tscn
@@ -11,14 +10,8 @@ res://button.tscn
 res://prisma.tscn
 res://and_gate.tscn
 res://textbox/textbox.tscn
-res://textbox/textbox.gd
-res://Menu/controls.tscn
-res://Menu/Credits.tscn
-res://Menu/MaimMenu.tscn
-res://Menu/levelselect.tscn
-res://Menu/MainMenu.gd
-res://Menu/MainMenu.tscn
-res://Chests.gd
-res://and_gate.gd
 res://prisma.gd
-res://RayCast2D.gd
+res://Chests.gd
+res://button.gd
+res://room_2.gd
+res://light.gd

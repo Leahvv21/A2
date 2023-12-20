@@ -12,7 +12,7 @@ func _ready():
 	$RayCast2D.target_position = Vector2.ZERO
 	#$RayCast2D.force_raycast_update() # Update the `target_position` immediately
 
-func _process(_delta):
+func _physics_process(delta):
 	if Activate:
 		$RayCast2D.enabled = true
 		if $RayCast2D.target_position == Vector2.ZERO: 
