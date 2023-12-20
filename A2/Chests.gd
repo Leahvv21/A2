@@ -5,6 +5,7 @@ var used = false
 
 func _process(_delta):
 	if interact && Input.is_action_just_pressed("interact") && !used:
+		$AnimatedSprite2D.play("open")
 		$"../../Player".add_mirror(1)
 		used = true
 		
