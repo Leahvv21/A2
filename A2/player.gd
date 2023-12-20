@@ -10,9 +10,9 @@ func _ready():
 func _process(_delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	$GridMovement.move(input_direction)
-	$Camera2D/Label.text = "Mirror Count: %s" % mirror_count
+	$"../UI/Label".text = "Mirror Count: %s" % mirror_count
 	if mirror_count > 0 : 
-		$Camera2D/Label.visible = true 
+		$"../UI/Label".visible = true 
 
 func add_mirror(mirror_amount):
 	mirror_count += mirror_amount 
