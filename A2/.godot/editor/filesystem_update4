@@ -1,9 +1,8 @@
-res://room_1.tscn
-res://light.gd
 res://player.tscn
 res://overlay.tscn
 res://light.tscn
 res://mirror.tscn
+res://room_1.tscn
 res://room_2.tscn
 res://room_3.tscn
 res://level change/level_change.tscn
@@ -11,5 +10,7 @@ res://button.tscn
 res://prisma.tscn
 res://and_gate.tscn
 res://textbox/textbox.tscn
-res://Desks.gd
-res://textbox/textbox.gd
+res://prisma.gd
+res://RayCast2D.gd
+res://mirror.gd
+res://StaticBody2D.gd

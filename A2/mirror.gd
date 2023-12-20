@@ -3,6 +3,7 @@ var interact = false
 var first = true
 
 func _process(_delta):
+	$Sprite2D/RayCast2D.force_raycast_update()
 	if $Sprite2D/RayCast2D.is_colliding():
 		$Sprite2D/Light.Activate = false
 	if interact && Input.is_action_just_pressed("flip"):

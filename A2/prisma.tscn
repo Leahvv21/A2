@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://qmt0c30rkt4q"]
+[gd_scene load_steps=6 format=3 uid="uid://qmt0c30rkt4q"]
 
 [ext_resource type="Script" path="res://prisma.gd" id="1_87wps"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_pac2q"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="2_m2go3"]
+[ext_resource type="Script" path="res://RayCast2D.gd" id="4_1fd7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_883hc"]
 atlas = ExtResource("1_pac2q")
@@ -24,4 +25,8 @@ Length = 200
 
 [node name="RayCast2D" type="RayCast2D" parent="Sprite2D"]
 position = Vector2(0, 2)
-target_position = Vector2(0, 10)
+target_position = Vector2(0, 24)
+script = ExtResource("4_1fd7w")
+
+[connection signal="collided" from="Sprite2D/RayCast2D" to="." method="_on_ray_cast_2d_collided"]
+[connection signal="not_colliding" from="Sprite2D/RayCast2D" to="." method="_on_ray_cast_2d_not_colliding"]

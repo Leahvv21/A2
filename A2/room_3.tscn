@@ -6546,89 +6546,7 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-1376289, 393216, 0, -262177, 393216, 0, -131105, 327680, 0, -33, 393216, 0, 393183, 327680, 0, 458719, 327680, 0, 983007, 458752, 0, -1966112, 327680, 0, -1769504, 458752, 0, -1572896, 458752, 0, -589856, 458752, 0, -196640, 393216, 0, -32, 458752, 0, 327649, 327680, 0, 655329, 458752, 0, -1966110, 393216, 0, -655390, 393216, 0, 786402, 327680, 0, -1900573, 327680, 0, 458724, 458752, 0, -1769499, 458752, 0, -1245211, 458752, 0, -1179675, 327680, 0, -851995, 327680, 0, -393243, 327680, 0, -65563, 393216, 0, 458725, 393216, 0, 524261, 393216, 0, 786405, 393216, 0, 851941, 327680, 0, 393190, 393216, 0, 720870, 327680, 0, -1769496, 327680, 0, -1376280, 393216, 0, 327656, 458752, 0, -1114135, 458752, 0, -327703, 458752, 0, 131049, 458752, 0, -1441814, 458752, 0, -1245206, 393216, 0, -917526, 393216, 0, -786454, 393216, 0, 196587, 327680, 0, -1572884, 327680, 0, -851988, 393216, 0, -1900531, 327680, 0, -1376243, 458752, 0, -1441778, 327680, 0, 196622, 458752, 0, -524273, 393216, 0, -327665, 393216, 0, -131057, 393216, 0, 15, 327680, 0, -786416, 327680, 0, 131089, 393216, 0, 262161, 327680, 0, -720878, 327680, 0, -1179629, 458752, 0, -327661, 393216, 0, -131053, 393216, 0, 19, 327680, 0, -917484, 327680, 0, -524268, 327680, 0, -2031595, 458752, 0, -1834986, 393216, 0, -1245162, 327680, 0, -655338, 327680, 0, -458730, 458752, 0, 65558, 458752, 0, 196630, 458752, 0, -1966057, 327680, 0, -1572841, 327680, 0, -1245161, 458752, 0, 196631, 327680, 0, -1638384, 393216, 0, -1441776, 458752, 0, -1376238, 458752, 0, -1900525, 458752, 0, -1769453, 458752, 0, -1572845, 327680, 0, -1441773, 393216, 0, -1048561, 393216, 0, -1114094, 393216, 0, -1179627, 327680, 0, -1507358, 393216, 0, -1179678, 458752, 0, -458782, 458752, 0, -131102, 393216, 0, -30, 393216, 0, 196578, 458752, 0, -1507357, 393216, 0, -1376285, 327680, 0, -196637, 458752, 0, 131043, 327680, 0, -1376284, 327680, 0, -1310747, 327680, 0, -1114139, 458752, 0, -720923, 327680, 0, -1507353, 327680, 0, -23, 327680, 0, -1507350, 458752, 0, -1179670, 393216, 0, -327702, 458752, 0, -65537, 2424832, 17, 917497, 2359296, 17, -2031632, 1245184, 5, -2097169, 1245184, 5, -2228241, 1245184, 5, -2293776, 1245184, 5, -2359287, 1245184, 5, -2293750, 1245184, 5, -2162678, 1245184, 5, -2097143, 1245184, 5, -2293751, 1048576, 6, -2228215, 1048576, 6, -2162679, 1048576, 6, -2293752, 1048576, 6, -2359288, 1048576, 6, -2293775, 1048576, 6, -2293774, 1048576, 6, -2293773, 1048576, 6, -2293772, 1048576, 6, -2293771, 1048576, 6, -2293770, 1048576, 6, -2293769, 1048576, 6, -2293768, 1048576, 6, -2293767, 1048576, 6, -2293766, 1048576, 6, -2293765, 1048576, 6, -2293764, 1048576, 6, -2293763, 1048576, 6, -2293762, 1048576, 6, -2293761, 1048576, 6, -2359296, 1048576, 6, -2359295, 1048576, 6, -2359294, 1048576, 6, -2359293, 1048576, 6, -2359292, 1048576, 6, -2359291, 1048576, 6, -2359290, 1048576, 6, -2359289, 1048576, 6, -2097144, 1048576, 6, -2162680, 1048576, 6, -2097147, 1048576, 6, -2097148, 1048576, 6, -2097149, 1048576, 6, -2097150, 1048576, 6, -2097151, 1048576, 6, -2097152, 1048576, 6, -2031617, 1048576, 6, -2031618, 1048576, 6, -2031619, 1048576, 6, -2031620, 1048576, 6, -2031621, 1048576, 6, -2031622, 1048576, 6, -2031623, 1048576, 6, -2031624, 1048576, 6, -2031625, 1048576, 6, -2031626, 1048576, 6, -2031627, 1048576, 6, -2031628, 1048576, 6, -2031629, 1048576, 6, -2031630, 1048576, 6, -2031631, 1048576, 6, -2097167, 1048576, 6, -2097168, 1048576, 6, -2162704, 1048576, 6, -2228240, 1048576, 6, -2228239, 1048576, 6, -1900562, 196608, 7, -1900561, 196608, 7, -1900559, 196608, 7, -1900558, 196608, 7, -1900557, 196608, 7, -1769490, 327680, 8, -1900545, 131072, 8, -1966079, 393216, 7, -1966078, 393216, 7, -917502, 131072, 8, -917501, 131072, 8, -851972, 131072, 8, -851971, 131072, 8, -1310729, 131072, 8, -1310728, 131072, 8, -1310727, 131072, 8, -851970, 131072, 8, -917500, 131072, 8, -1966080, 0, 8, -1900546, 393216, 7)
 
-[node name="mirrors+prisma+AND" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource("TileSet_yewwa")
-format = 2
-layer_0/name = "mirrors"
-layer_0/tile_data = PackedInt32Array(327664, 2621440, 14, -1376272, 2621440, 14, -983051, 2621440, 14, -1769483, 2621440, 14, -1441785, 2555904, 14, -1048567, 2621440, 14, -1834999, 2621440, 14, -1638400, 2621440, 14, -1638391, 2621440, 14, -1179653, 2621440, 14, -1245179, 2621440, 14, -1441783, 2621440, 14, -1048571, 2621440, 14, -983045, 2621440, 14)
-layer_1/name = "AND gate"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-1245184, 1048576, 4)
-layer_2/name = "prisma"
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
-layer_2/y_sort_enabled = false
-layer_2/y_sort_origin = 0
-layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(-1376267, 2162688, 10)
-
-[node name="Chest" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_tjd4n")
-format = 2
-layer_0/tile_data = PackedInt32Array(-917504, 524288, 6, -655360, 589824, 6)
-
-[node name="Chest1" type="Area2D" parent="Chest"]
-position = Vector2(0, 64)
-collision_layer = 4
-collision_mask = 8
-monitorable = false
-script = ExtResource("2_hqfl4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Chest1"]
-position = Vector2(8, -280)
-shape = SubResource("RectangleShape2D_dtaax")
-
-[node name="Player" parent="." instance=ExtResource("2_kdbyb")]
-position = Vector2(-216, 72)
-
-[node name="Desks" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_bwqh5")
-format = 2
-layer_0/tile_data = PackedInt32Array(-1900560, 262144, 7, 393202, 524288, 7)
-
-[node name="Desk1" type="Area2D" parent="Desks"]
-collision_layer = 4
-collision_mask = 8
-monitorable = false
-script = ExtResource("4_wtadk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
-position = Vector2(-280, -440)
-shape = SubResource("RectangleShape2D_kvjlq")
-
-[node name="Prisma" parent="." instance=ExtResource("5_5ygjn")]
-position = Vector2(-168, -344)
-rotation = 1.5708
-
-[node name="Light" parent="." instance=ExtResource("6_8jovw")]
-position = Vector2(-184, 72)
-rotation = 1.5708
-Length = 200
-Activate = true
-
-[node name="AND Gate" parent="." instance=ExtResource("9_7hwtl")]
-position = Vector2(8, -296)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(120, -344)
-texture = SubResource("AtlasTexture_l5tm0")
-
-[node name="mirror_spot1" type="Area2D" parent="Sprite2D"]
-collision_layer = 4
-collision_mask = 8
-monitorable = false
-script = ExtResource("2_nnydr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/mirror_spot1"]
-shape = SubResource("RectangleShape2D_y8fd2")
-
 [node name="Overlay" parent="." instance=ExtResource("3_e666b")]
-visible = false
 
 [node name="Mirror" parent="Overlay" instance=ExtResource("4_1nrc4")]
 position = Vector2(-248, 72)
@@ -6668,6 +6586,93 @@ position = Vector2(152, -392)
 
 [node name="Mirror13" parent="Overlay" instance=ExtResource("4_1nrc4")]
 position = Vector2(152, -440)
+
+[node name="Prisma" parent="Overlay" instance=ExtResource("5_5ygjn")]
+position = Vector2(-168, -344)
+rotation = 1.5708
+
+[node name="mirrors+prisma+AND" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource("TileSet_yewwa")
+format = 2
+layer_0/name = "mirrors"
+layer_0/tile_data = PackedInt32Array(327664, 2621440, 14, -1376272, 2621440, 14, -983051, 2621440, 14, -1769483, 2621440, 14, -1441785, 2555904, 14, -1048567, 2621440, 14, -1834999, 2621440, 14, -1638400, 2621440, 14, -1638391, 2621440, 14, -1179653, 2621440, 14, -1245179, 2621440, 14, -1441783, 2621440, 14, -1048571, 2621440, 14, -983045, 2621440, 14)
+layer_1/name = "AND gate"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(-1245184, 1048576, 4)
+layer_2/name = "prisma"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array(-1376267, 2162688, 10)
+
+[node name="Chest" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_tjd4n")
+format = 2
+layer_0/tile_data = PackedInt32Array(-917504, 524288, 6, -655360, 589824, 6)
+
+[node name="Chest1" type="Area2D" parent="Chest"]
+position = Vector2(0, 64)
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_hqfl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Chest1"]
+position = Vector2(8, -280)
+shape = SubResource("RectangleShape2D_dtaax")
+
+[node name="Player" parent="." instance=ExtResource("2_kdbyb")]
+position = Vector2(-248, -344)
+
+[node name="Desks" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_bwqh5")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1900560, 262144, 7, 393202, 524288, 7)
+
+[node name="Desk1" type="Area2D" parent="Desks"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("4_wtadk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
+position = Vector2(-280, -440)
+shape = SubResource("RectangleShape2D_kvjlq")
+
+[node name="Light" parent="." instance=ExtResource("6_8jovw")]
+position = Vector2(-184, 72)
+rotation = 1.5708
+Length = 200
+Activate = true
+
+[node name="Light2" parent="." instance=ExtResource("6_8jovw")]
+position = Vector2(-248, 56)
+rotation = 3.14159
+Length = 200
+Activate = true
+
+[node name="AND Gate" parent="." instance=ExtResource("9_7hwtl")]
+position = Vector2(8, -296)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, -344)
+texture = SubResource("AtlasTexture_l5tm0")
+
+[node name="mirror_spot1" type="Area2D" parent="Sprite2D"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("2_nnydr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/mirror_spot1"]
+shape = SubResource("RectangleShape2D_y8fd2")
 
 [node name="Level_change" parent="." instance=ExtResource("11_bw5ms")]
 position = Vector2(-232, -536)
