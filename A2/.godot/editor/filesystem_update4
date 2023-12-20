@@ -8,3 +8,5 @@ res://Menu/MainMenu.tscn
 res://Menu/levelselect.tscn
 res://Menu/Credits.tscn
 res://Menu/controls.tscn
+res://garden.tscn
+res://Desks.gd

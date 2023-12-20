@@ -114,8 +114,8 @@ corner_radius_bottom_left = 10
 script = ExtResource("1_sln6k")
 
 [node name="ColorRect" type="Sprite2D" parent="."]
-position = Vector2(587.125, 359.75)
-scale = Vector2(2.19841, 1.80125)
+position = Vector2(580.624, 331.25)
+scale = Vector2(2.17402, 1.65875)
 texture = ExtResource("2_jr2jm")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
