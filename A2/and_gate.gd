@@ -1,6 +1,6 @@
 extends Node2D
 
-func _process(delta):
+func _process(_delta):
 	$Sprite2D/RayCast2D.force_raycast_update()
 	$Sprite2D/RayCast2D2.force_raycast_update()
 	$Sprite2D/RayCast2D3.force_raycast_update()

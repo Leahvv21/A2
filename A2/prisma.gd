@@ -1,7 +1,7 @@
 extends Node2D
 var test = true
 
-func _process(delta):
+func _process(_delta):
 	$Sprite2D/RayCast2D.force_raycast_update()
 	if !$Sprite2D/RayCast2D.is_colliding():
 		$Sprite2D/Light.Activate = true

@@ -4,7 +4,7 @@ var last_collider: Object
 signal collided 
 signal not_colliding 
 
-func _process(delta):
+func _process(_delta):
 	var current_collider = get_collider()
 	if !is_colliding():
 		#if current_collider != last_collider:
