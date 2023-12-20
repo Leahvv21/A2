@@ -1,8 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c805wiliumehw"]
 
 [ext_resource type="Script" path="res://Menu/MainMenu.gd" id="1_sln6k"]
-
-[sub_resource type="SystemFont" id="SystemFont_0bi8f"]
+[ext_resource type="Texture2D" uid="uid://b4al82r02m3an" path="res://Illustration39.png" id="2_jr2jm"]
 
 [sub_resource type="FontFile" id="FontFile_6d6il"]
 cache/0/16/0/ascent = 0.0
@@ -114,14 +113,16 @@ corner_radius_bottom_left = 10
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_sln6k")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.0431373, 0.294118, 0.321569, 1)
+[node name="ColorRect" type="Sprite2D" parent="."]
+position = Vector2(587.125, 359.75)
+scale = Vector2(2.19841, 1.80125)
+texture = ExtResource("2_jr2jm")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -279.0
+offset_top = 118.0
+offset_right = 873.0
+offset_bottom = 766.0
 theme_override_constants/margin_left = 175
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 175
@@ -130,14 +131,6 @@ theme_override_constants/margin_bottom = 150
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 100
-
-[node name="Titel" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_0bi8f")
-theme_override_font_sizes/font_size = 100
-text = "LuminaLabyrinth"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Knoppen" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

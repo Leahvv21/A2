@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddq61afo2g0mi"]
+[gd_scene load_steps=5 format=3 uid="uid://ddq61afo2g0mi"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0ucxf"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_nysqu"]
 [ext_resource type="PackedScene" uid="uid://cafke7qkrgpon" path="res://grid_movement.tscn" id="3_xba6d"]
-[ext_resource type="AudioStream" uid="uid://ciqvk1bqm7xkt" path="res://Sounds/Walking.wav" id="4_1ystn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12swi"]
 size = Vector2(16, 16)
@@ -16,9 +15,6 @@ script = ExtResource("1_0ucxf")
 
 [node name="GridMovement" parent="." node_paths=PackedStringArray("self_node") instance=ExtResource("3_xba6d")]
 self_node = NodePath("..")
-
-[node name="SFX" type="AudioStreamPlayer" parent="GridMovement"]
-stream = ExtResource("4_1ystn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
