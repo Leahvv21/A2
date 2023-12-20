@@ -6594,6 +6594,7 @@ position = Vector2(-168, -344)
 rotation = 1.5708
 
 [node name="mirrors+prisma+AND" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_yewwa")
 format = 2
 layer_0/name = "mirrors"
