@@ -18,7 +18,7 @@ func _ready():
 	print('starting state is READY')
 	hide_textbox()
 
-func _process(delta):
+func _process(_delta):
 	match Current_State:
 		State.READY:
 			if interact && Input.is_action_just_pressed("interact"):
