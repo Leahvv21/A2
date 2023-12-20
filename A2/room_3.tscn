@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dtlrbxvkdb7t3"]
+[gd_scene load_steps=31 format=3 uid="uid://dtlrbxvkdb7t3"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_3kya7"]
 [ext_resource type="Script" path="res://Chests.gd" id="2_hqfl4"]
@@ -9,10 +9,12 @@
 [ext_resource type="Script" path="res://Desks.gd" id="4_wtadk"]
 [ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="5_5ygjn"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="6_8jovw"]
+[ext_resource type="AudioStream" uid="uid://b68bo7f7g74ja" path="res://Sounds/Chest.wav" id="7_5gxj4"]
 [ext_resource type="PackedScene" uid="uid://e52msrr1878w" path="res://and_gate.tscn" id="9_7hwtl"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="9_hxfjl"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="11_bw5ms"]
 [ext_resource type="PackedScene" uid="uid://bos8rpu5pdhlq" path="res://textbox/textbox.tscn" id="13_8g0iq"]
+[ext_resource type="AudioStream" uid="uid://cd8ukhdp3g7op" path="res://Sounds/Mirror_place.wav" id="13_f8j7f"]
 [ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="14_y3w4a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjpvo"]
@@ -5581,6 +5583,9 @@ position = Vector2(7.62939e-06, -1.52588e-05)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_r8hc2")
 
+[node name="SFX" type="AudioStreamPlayer" parent="Chest/Chest1"]
+stream = ExtResource("7_5gxj4")
+
 [node name="Player" parent="." instance=ExtResource("2_kdbyb")]
 position = Vector2(-200, 72)
 
@@ -5680,6 +5685,11 @@ script = ExtResource("2_nnydr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/mirror_spot1"]
 shape = SubResource("RectangleShape2D_y8fd2")
+
+[node name="SFX" type="AudioStreamPlayer" parent="Sprite2D/mirror_spot1"]
+stream = ExtResource("13_f8j7f")
+volume_db = -10.0
+pitch_scale = 0.5
 
 [node name="Level_change" parent="." instance=ExtResource("11_bw5ms")]
 position = Vector2(-232, -536)
