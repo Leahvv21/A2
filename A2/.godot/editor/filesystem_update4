@@ -1,13 +1,10 @@
-res://room_3.tscn
-res://light.gd
 res://player.tscn
 res://room_1.tscn
 res://room_2.tscn
+res://room_3.tscn
 res://overlay.tscn
 res://mirror.tscn
 res://Menu/MainMenu.tscn
 res://Menu/levelselect.tscn
 res://Menu/Credits.tscn
 res://Menu/controls.tscn
-res://textbox/textbox.tscn
-res://player.gd
