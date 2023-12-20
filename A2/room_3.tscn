@@ -5633,7 +5633,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
-text = "Different wines are neatly stocked up. Included are even the now banned ‘Pas de Regrets’ and ‘Lunar Luminence’."
+text = "Different wines are neatly stacked. Included are even the now banned ‘Pas de Regrets’ and ‘Lunar Luminence’."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4"]
 position = Vector2(8, -472)
