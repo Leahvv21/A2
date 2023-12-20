@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://e52msrr1878w"]
+[gd_scene load_steps=6 format=3 uid="uid://e52msrr1878w"]
 
 [ext_resource type="Script" path="res://and_gate.gd" id="1_fwis5"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_vnewt"]
@@ -7,6 +7,9 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4h5v"]
 atlas = ExtResource("1_vnewt")
 region = Rect2(256, 64, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe6eh"]
+size = Vector2(5, 3)
 
 [node name="AND Gate" type="Node2D"]
 script = ExtResource("1_fwis5")
@@ -28,3 +31,10 @@ target_position = Vector2(0, 10)
 
 [node name="Light" parent="Sprite2D" instance=ExtResource("3_w3yg5")]
 Length = 200
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+shape = SubResource("RectangleShape2D_pe6eh")
