@@ -9,6 +9,8 @@ func _ready():
  
 func _process(_delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
+	if input_direction:
+		$SFX.play()
 	$GridMovement.move(input_direction)
 	$Camera2D/Label.text = "Mirror Count: %s" % mirror_count
 	if mirror_count > 0 : 

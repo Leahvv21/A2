@@ -1,17 +1,11 @@
 res://player.tscn
+res://room_2.tscn
 res://overlay.tscn
-res://light.tscn
+res://room_3.tscn
 res://mirror.tscn
 res://room_1.tscn
-res://room_2.tscn
-res://room_3.tscn
-res://level change/level_change.tscn
-res://button.tscn
-res://prisma.tscn
-res://and_gate.tscn
-res://textbox/textbox.tscn
-res://prisma.gd
+res://mirror.gd
+res://MirrorPlacements.gd
 res://Chests.gd
-res://button.gd
-res://room_2.gd
-res://light.gd
+res://player.gd
+res://textbox/textbox.gd

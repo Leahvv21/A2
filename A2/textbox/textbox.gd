@@ -40,6 +40,7 @@ func hide_textbox():
 	change_state(State.READY)
 
 func show_textbox():
+	$SFX.play()
 	start_symbol.text = '*'
 	textbox_container.show()
 	end_symbol.text = 'V'

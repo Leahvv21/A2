@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cxdj6l8tw3thc"]
+[gd_scene load_steps=29 format=3 uid="uid://bv4iefeihglp0"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_u8b3q"]
 [ext_resource type="PackedScene" uid="uid://ddq61afo2g0mi" path="res://player.tscn" id="2_5w0fv"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="4_vdufl"]
 [ext_resource type="Script" path="res://MirrorPlacements.gd" id="4_wwfif"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="4_xrdxg"]
+[ext_resource type="AudioStream" uid="uid://b68bo7f7g74ja" path="res://Sounds/Chest.wav" id="5_84hti"]
 [ext_resource type="Script" path="res://Desks.gd" id="5_wmrdt"]
+[ext_resource type="AudioStream" uid="uid://cd8ukhdp3g7op" path="res://Sounds/Mirror_place.wav" id="6_q703s"]
 [ext_resource type="PackedScene" uid="uid://cu58hbme46i5q" path="res://level change/level_change.tscn" id="7_8rw0p"]
+[ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="13_fb3dr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djvwu"]
 texture = ExtResource("1_u8b3q")
@@ -5515,6 +5518,9 @@ position = Vector2(80, -96)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_unl6u")
 
+[node name="SFX" type="AudioStreamPlayer" parent="Chests/Chest1"]
+stream = ExtResource("5_84hti")
+
 [node name="Chest2" type="Area2D" parent="Chests"]
 collision_layer = 4
 collision_mask = 8
@@ -5536,6 +5542,9 @@ shape = SubResource("RectangleShape2D_unl6u")
 position = Vector2(-88, -184)
 shape = SubResource("RectangleShape2D_sojy1")
 
+[node name="SFX" type="AudioStreamPlayer" parent="Chests/Chest2"]
+stream = ExtResource("5_84hti")
+
 [node name="MirrorPlacements" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7bajw")
 format = 2
@@ -5551,6 +5560,11 @@ script = ExtResource("4_wwfif")
 position = Vector2(8, -184)
 shape = SubResource("RectangleShape2D_cb1qw")
 
+[node name="SFX" type="AudioStreamPlayer" parent="MirrorPlacements/mirror_spot1"]
+stream = ExtResource("6_q703s")
+volume_db = -10.0
+pitch_scale = 0.5
+
 [node name="mirror_spot2" type="Area2D" parent="MirrorPlacements"]
 collision_layer = 4
 collision_mask = 8
@@ -5560,6 +5574,11 @@ script = ExtResource("4_wwfif")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorPlacements/mirror_spot2"]
 position = Vector2(312, -184)
 shape = SubResource("RectangleShape2D_c0fpv")
+
+[node name="SFX" type="AudioStreamPlayer" parent="MirrorPlacements/mirror_spot2"]
+stream = ExtResource("6_q703s")
+volume_db = -10.0
+pitch_scale = 0.5
 
 [node name="Desks" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_i7v7n")
@@ -5611,6 +5630,9 @@ position = Vector2(312, -296)
 next_scene = "res://room_2.tscn"
 
 [node name="Textbox" parent="." instance=ExtResource("3_cp8mm")]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Textbox"]
+stream = ExtResource("13_fb3dr")
 
 [connection signal="area_entered" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_entered"]
 [connection signal="area_exited" from="Chests/Chest1" to="Chests/Chest1" method="_on_area_exited"]

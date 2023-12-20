@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dj1cuy0oi352a"]
+[gd_scene load_steps=26 format=3 uid="uid://dj1cuy0oi352a"]
 
 [ext_resource type="Texture2D" uid="uid://udnqarfniwrv" path="res://colored_packed.png" id="1_0blxg"]
 [ext_resource type="Script" path="res://room_2.gd" id="1_aj8vr"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://qmt0c30rkt4q" path="res://prisma.tscn" id="9_7nbkk"]
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="9_pcclh"]
 [ext_resource type="PackedScene" uid="uid://bos8rpu5pdhlq" path="res://textbox/textbox.tscn" id="11_0fw6v"]
+[ext_resource type="AudioStream" uid="uid://cn3j8vvcgiudh" path="res://Sounds/Paper.wav" id="13_2mdha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqca1"]
 texture = ExtResource("1_0blxg")
@@ -6715,6 +6716,9 @@ visible = false
 position = Vector2(8, 72)
 
 [node name="Textbox" parent="." instance=ExtResource("11_0fw6v")]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Textbox"]
+stream = ExtResource("13_2mdha")
 
 [connection signal="area_entered" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_entered"]
 [connection signal="area_exited" from="Desks/Desk1" to="Desks/Desk1" method="_on_area_exited"]

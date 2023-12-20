@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://xuqqn2mjt0sa"]
+[gd_scene load_steps=10 format=3 uid="uid://xuqqn2mjt0sa"]
 
 [ext_resource type="Texture2D" uid="uid://ddgjo6dv67i5s" path="res://colored-transparent_packed.png" id="1_mm7v6"]
 [ext_resource type="Script" path="res://mirror.gd" id="1_o10l1"]
 [ext_resource type="PackedScene" uid="uid://yipf0kja0xkf" path="res://light.tscn" id="2_78nfc"]
 [ext_resource type="Script" path="res://StaticBody2D.gd" id="4_j33ap"]
+[ext_resource type="AudioStream" uid="uid://fjv0b3tujsra" path="res://Sounds/Mirror.wav" id="5_1o30q"]
+[ext_resource type="AudioStream" uid="uid://d233axrc11423" path="res://Sounds/Mirror_flip.wav" id="6_tshif"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swshw"]
 atlas = ExtResource("1_mm7v6")
@@ -48,6 +50,12 @@ monitorable = false
 position = Vector2(-1, 0)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_acw05")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1o30q")
+
+[node name="SFX_flip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tshif")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -6,6 +6,7 @@ var used = false
 func _process(_delta):
 	if interact && Input.is_action_just_pressed("interact") && !used:
 		if $"../../Player".check_mirror():
+			$SFX.play()
 			$"../../Player".add_mirror(-1)
 			var mirror_instance = mirror.instantiate()
 			mirror_instance.global_position = $CollisionShape2D.global_position
