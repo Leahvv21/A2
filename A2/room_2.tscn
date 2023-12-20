@@ -6593,6 +6593,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_peova")
+text = "Closed off from everything, I have to light up the switches to the next step."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
 position = Vector2(-8, 120)
@@ -6603,6 +6604,12 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_peova")
+text = "In one of the shelves is an old letter addressed to ‘Lumière Sombrio’.
+It reads: 
+Hello Lumière. You finally did it. I walked into a bookstore and what do I see, but your book flying off the shelves. That is incredible.
+But what about you? You do not often write back anymore and you seem even more reclusive than before. Are those rumours about that place actually true? Because if they are, then why would you ever decide to move there?
+Sincerely, Nia Miroir
+"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2"]
 position = Vector2(184, 8)
@@ -6613,6 +6620,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_peova")
+text = "It’s an old bookshelf. It’s covered in a thick layer of dust and it looks like it’s mostly rotten. All of the books here are written by the same person: Lumière Sombrio."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(-168, -56)
@@ -6623,6 +6631,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_peova")
+text = "Why is there a skull on this desk? And why does it look like it’s staring at me?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4"]
 position = Vector2(8, -168)
@@ -6633,6 +6642,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_peova")
+text = "There are a bunch of old books on the shelves. One of them seems to be purring. On second thought, better not touch it."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5"]
 position = Vector2(120, -168)

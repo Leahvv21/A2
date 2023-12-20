@@ -5600,6 +5600,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "One becomes three, three become one."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk1"]
 position = Vector2(-216, 88)
@@ -5610,6 +5611,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "It’s a bed covered in dust. Clearly no one has slept here in quite some time."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk2"]
 position = Vector2(-280, -440)
@@ -5620,6 +5622,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "There are a bunch of old books on the shelves. Some of them over 40 years old."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk3"]
 position = Vector2(-248, -472)
@@ -5630,6 +5633,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "Different wines are neatly stocked up. Included are even the now banned ‘Pas de Regrets’ and ‘Lunar Luminence’."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk4"]
 position = Vector2(8, -472)
@@ -5640,6 +5644,11 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "In one of the shelves is an old letter addressed to ‘Lumière Sombrio’.
+It reads: Hello Lumière.
+It has been a couple years since the last time I wrote to you and a lot has changed since then. I actually got married in that time. I know that was something that we promised between the two of us, but I couldn’t wait any longer. Especially after you stopped interacting with me and the others. 
+I guess, that’s something I should have seen coming. Especially after your most recent bestseller titled: ‘Forgetting to listen.’
+Sincerely, Nia Reflexion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Desk5"]
 position = Vector2(184, -248)
@@ -5650,6 +5659,7 @@ collision_layer = 4
 collision_mask = 8
 monitorable = false
 script = ExtResource("4_wtadk")
+text = "In loving memory of Lumière Sombrio. 1957 – 1991."
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desks/Grave"]
 position = Vector2(-232, -536)

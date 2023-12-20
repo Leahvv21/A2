@@ -11,3 +11,5 @@ target_position = Vector2(0, 16)
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_th4ui")
+volume_db = -10.0
+pitch_scale = 0.5
